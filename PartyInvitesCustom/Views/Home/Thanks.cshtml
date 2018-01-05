@@ -1,0 +1,29 @@
+﻿@model Entities.GuestResponse
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Thanks</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body class="text-center">
+	<p>
+		<h1>Thank you, @Model.Name, for RSVPing!</h1>
+		@if (Model.WillAttend == true)
+		{
+			@:It's great that you're coming to the party. The drinks are already chilling!
+		}
+		else
+		{
+			@:Sorry to hear that you can't make it, thanks for letting us know.
+		}
+	</p>
+	<p>Click <a class="nav-link" asp-action="ListResponses">here</a> to see who is coming to the party.</p>
+</body>
+</html>
