@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities;
+using PartyInvitesCustom.Adapters;
 using PartyInvitesCustom.Models;
 using System;
 using System.Collections.Generic;
@@ -19,34 +20,23 @@ namespace PartyInvitesCustom.Orchestrators
 		}
 
 		public void Add(GuestResponse aGuestResponse) {
-			IGuest vGuest = new Guest();
-			vGuest.Name = aGuestResponse.Name;
-			vGuest.Email = aGuestResponse.Email;
-			vGuest.Phone = aGuestResponse.Phone;
-			vGuest.WillAttend = aGuestResponse.WillAttend;
+			GuestAdaptor vGuestAd = new GuestAdaptor();
 
-			_Repository.Add(vGuest);
-
+			_Repository.Add(vGuestAd.Adapt(aGuestResponse));
 		}
 
 		public List<AttendingGuest> GuestList() {
 			List<AttendingGuest> atGuestList = new List<AttendingGuest>();
 
 			var guestList = _Repository.GetAll().Where(r => r.WillAttend == true);
-			foreach (var guest in guestList) {
-				AttendingGuest atGuest = new AttendingGuest();
-				atGuest.Name = guest.Name;
-				atGuest.Email= guest.Email;
-				atGuest.Phone = guest.Phone;
 
-				atGuestList.Add(atGuest);
+			foreach (var guest in guestList) {
+				GuestAdaptor vGuestAd = new GuestAdaptor();
+
+				atGuestList.Add(vGuestAd.Adapt(guest));
 			}
 
 			return(atGuestList);
 		}
-
-
-		//
-
 	}
 }
