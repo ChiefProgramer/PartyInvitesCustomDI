@@ -24,7 +24,7 @@ namespace RepositoryMemory.Test
 		{
 			// Arrange
 			int vExpected = 1;
-			IPartyInvitesR vRepository = new PartyInvitesR();
+			IGuestR vRepository = new PartyInvitesR();
 			int vCount = vRepository.Count();
 			GuestResponse vRecord = MakeNewRecord();
 

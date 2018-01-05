@@ -690,11 +690,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj",
+      "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj",
       "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\obj\\",
+      "outputPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -715,8 +715,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
             }
           }
         }

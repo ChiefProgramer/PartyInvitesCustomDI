@@ -1,9 +1,7 @@
-﻿namespace Entities
-{
+﻿namespace PartyInvitesCustom.Models {
 	using System.ComponentModel.DataAnnotations;
 
-	public class GuestResponse
-	{
+	public class GuestResponse {
 		[Required(ErrorMessage = "Please enter your name")]
 		public string Name { get; set; }
 

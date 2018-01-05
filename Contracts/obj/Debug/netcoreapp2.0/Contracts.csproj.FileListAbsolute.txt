@@ -9,3 +9,14 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.deps.json
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb

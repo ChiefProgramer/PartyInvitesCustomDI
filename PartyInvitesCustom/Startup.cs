@@ -1,38 +1,35 @@
-﻿namespace PartyInvitesCustom
-{
+﻿namespace PartyInvitesCustom {
 	using Contracts;
+	using Entities;
 	using Microsoft.AspNetCore.Builder;
 	using Microsoft.AspNetCore.Hosting;
 	using Microsoft.Extensions.Configuration;
 	using Microsoft.Extensions.DependencyInjection;
+	using PartyInvitesCustom.Orchestrators;
 	using RepositoryMemory;
 
-	public class Startup
-	{
-		public Startup(IConfiguration configuration)
-		{
+	public class Startup {
+		public Startup(IConfiguration configuration) {
 			Configuration = configuration;
 		}
 
 		// This method gets called by the runtime. Use this method to add services 
 		// to the container.
-		public void ConfigureServices(IServiceCollection services)
-		{
-			services.AddSingleton<IPartyInvitesR, PartyInvitesR>();
+		public void ConfigureServices(IServiceCollection services) {
+			services.AddSingleton<IGuestR, GuestR>();
+			services.AddSingleton<IGuests, Guests>();
+			services.AddSingleton<IGuest, Guest>();
 			services.AddMvc();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the
 		// HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-		{
-			if (env.IsDevelopment())
-			{
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+			if (env.IsDevelopment()) {
 				app.UseDeveloperExceptionPage();
 				app.UseBrowserLink();
 			}
-			else
-			{
+			else {
 				app.UseExceptionHandler("/Home/Error");
 			}
 
@@ -40,12 +37,11 @@
 
 			app.UseMvc
 			(
-				routes =>
-				{
-					routes.MapRoute
-					(
-						name: "default"
-						, template: "{controller=Home}/{action=Index}/{id?}");
+				routes => {
+					routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+					routes.MapRoute(name: "RsvpForm", template: "Home/{controller=RsvpFormController}/{action=RsvpForm}");
+					routes.MapRoute(name: "ListResponses", template: "RsvpForm/{controller=ListResponsesController}/{action=ListResponses}");
+					routes.MapRoute(name: "Error", template: "Home/{controller=ErrorController}/{action=Error}");
 				});
 		}
 

@@ -11,3 +11,16 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\ne
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.csprojResolveAssemblyReference.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.csproj.CoreCompileInputs.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfoInputs.cache
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfo.cs
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.deps.json
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Entities.pdb

@@ -20,4 +20,8 @@
     <ProjectReference Include="..\RepositoryMemory\RepositoryMemory.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\ListResponses\" />
+  </ItemGroup>
+
 </Project>
