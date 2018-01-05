@@ -1,0 +1,2 @@
+# PartyInvitesCustomDI
+.Net Newbie Project
