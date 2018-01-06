@@ -24,11 +24,9 @@ C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\ne
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.pdb
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Contracts.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Entities.dll
-C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryLocalDb.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMemory.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Contracts.pdb
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Entities.pdb
-C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMemory.pdb
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.csprojResolveAssemblyReference.cache
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.csproj.CoreCompileInputs.cache
@@ -36,3 +34,5 @@ C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\ne
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.AssemblyInfo.cs
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMySql.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMySql.pdb

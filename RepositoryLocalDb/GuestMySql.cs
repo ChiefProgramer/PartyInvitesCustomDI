@@ -1,14 +1,22 @@
-﻿namespace RepositoryLocalDb {
-	using System;
+﻿	using System;
 	using System.Collections.Generic;
 	using Contracts;
 	using Entities;
+	using MySql.Data.MySqlClient;
 
-	public class PartyInvitesR : IGuestR {
+
+namespace RepositoryMySql {
+
+	public class GuestMySql : IGuestR {
+
+		public GuestMySql() {
+			DbCreator.CreateDB();
+			DbCreator.CreateTables();
+		}
 
 		public int Count() {
 			throw new NotImplementedException();
-
+			  
 		}
 
 		public void Add(IGuest aGuestResponse) {

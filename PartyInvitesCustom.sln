@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory", "RepositoryMemory\RepositoryMemory.csproj", "{7D6078A8-62CE-47D2-A2B2-307F825C10D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLocalDb", "RepositoryLocalDb\RepositoryLocalDb.csproj", "{80EEC824-89EF-4043-AFEF-BAA227EC0DE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMySql", "RepositoryLocalDb\RepositoryMySql.csproj", "{80EEC824-89EF-4043-AFEF-BAA227EC0DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
