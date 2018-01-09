@@ -205,68 +205,8 @@
           "lib/netcoreapp2.0/MySql.Data.dll": {}
         },
         "contentFiles": {
-          "contentFiles/any/netcoreapp2.0/app.config.transform": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlCommand.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlCommandBuilder.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlConnection.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlConnectionStringBuilder.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlDataAdapter.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlDataReader.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlException.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlHelper.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlParameter.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlParameterCollection.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/docs/MySqlTransaction.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netcoreapp2.0/web.config.transform": {
-            "buildAction": "Content",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
             "codeLanguage": "any",
             "copyToOutput": false
           }
@@ -581,7 +521,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Contracts": "1.0.0"
+          "Contracts": "1.0.0",
+          "MySql.Data": "6.10.5"
         },
         "compile": {
           "bin/placeholder/RepoMySQL.dll": {}
@@ -2249,7 +2190,6 @@
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MySql.Data >= 6.10.5",
       "RepoMySQL >= 1.0.0"
     ]
   },
@@ -2315,10 +2255,6 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "MySql.Data": {
-            "target": "Package",
-            "version": "[6.10.5, )"
           }
         },
         "imports": [

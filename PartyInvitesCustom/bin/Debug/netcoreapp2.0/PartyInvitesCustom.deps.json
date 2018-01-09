@@ -28,8 +28,8 @@
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1",
-          "RepositoryMemory": "1.0.0",
-          "RepositoryMySql": "1.0.0"
+          "RepositoryDataCommon": "1.0.0",
+          "RepositoryMemory": "1.0.0"
         },
         "runtime": {
           "PartyInvitesCustom.dll": {}
@@ -4125,6 +4125,31 @@
           "Entities.dll": {}
         }
       },
+      "RepoMySQL/1.0.0": {
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "MySql.Data": "6.10.5"
+        },
+        "runtime": {
+          "RepoMySQL.dll": {}
+        },
+        "compile": {
+          "RepoMySQL.dll": {}
+        }
+      },
+      "RepositoryDataCommon/1.0.0": {
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Entities": "1.0.0",
+          "RepoMySQL": "1.0.0"
+        },
+        "runtime": {
+          "RepositoryDataCommon.dll": {}
+        },
+        "compile": {
+          "RepositoryDataCommon.dll": {}
+        }
+      },
       "RepositoryMemory/1.0.0": {
         "dependencies": {
           "Contracts": "1.0.0",
@@ -4135,19 +4160,6 @@
         },
         "compile": {
           "RepositoryMemory.dll": {}
-        }
-      },
-      "RepositoryMySql/1.0.0": {
-        "dependencies": {
-          "Contracts": "1.0.0",
-          "Entities": "1.0.0",
-          "MySql.Data": "6.10.5"
-        },
-        "runtime": {
-          "RepositoryMySql.dll": {}
-        },
-        "compile": {
-          "RepositoryMySql.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -6500,12 +6512,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "RepositoryMemory/1.0.0": {
+    "RepoMySQL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RepositoryMySql/1.0.0": {
+    "RepositoryDataCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RepositoryMemory/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

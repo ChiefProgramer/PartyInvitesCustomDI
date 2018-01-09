@@ -5116,7 +5116,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Contracts": "1.0.0"
+          "Contracts": "1.0.0",
+          "MySql.Data": "6.10.5"
         },
         "compile": {
           "bin/placeholder/RepoMySQL.dll": {}
@@ -5131,7 +5132,6 @@
         "dependencies": {
           "Contracts": "1.0.0",
           "Entities": "1.0.0",
-          "MySql.Data": "6.10.5",
           "RepoMySQL": "1.0.0"
         },
         "compile": {

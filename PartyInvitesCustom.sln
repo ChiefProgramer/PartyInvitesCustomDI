@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory.Test", "Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoMySQL", "MySQL\RepoMySQL.csproj", "{C991759E-450D-4D60-B1FF-1F82C187DA48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoSQLite", "RepoSQLite\RepoSQLite.csproj", "{06C9B9B4-3130-498A-9EC9-E88D77D609B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C991759E-450D-4D60-B1FF-1F82C187DA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C991759E-450D-4D60-B1FF-1F82C187DA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C991759E-450D-4D60-B1FF-1F82C187DA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C9B9B4-3130-498A-9EC9-E88D77D609B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C9B9B4-3130-498A-9EC9-E88D77D609B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C9B9B4-3130-498A-9EC9-E88D77D609B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C9B9B4-3130-498A-9EC9-E88D77D609B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

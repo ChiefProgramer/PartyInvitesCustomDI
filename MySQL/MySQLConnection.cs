@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using Contracts;
+using MySql.Data.MySqlClient;
 
 namespace ReopMySQL
 {
@@ -13,7 +14,7 @@ namespace ReopMySQL
 
 		public IDbConnection Connection(string aConnectionString) {
 
-			var vConnection = new SqlConnection { ConnectionString = aConnectionString };
+			var vConnection = new MySqlConnection { ConnectionString = aConnectionString };
 
 			return (vConnection);
 		}
