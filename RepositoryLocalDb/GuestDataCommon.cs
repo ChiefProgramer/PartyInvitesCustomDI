@@ -33,17 +33,11 @@ namespace RepositoryDataCommon {
 			IDbCommand DBcmd = DataConn.CreateCommand();
 
 			//try {
-
-
-			IDataAdapter adapter = mDataConnector.DataAdapter();
-
 			DBcmd.CommandText = "";
 			DBcmd.ExecuteNonQuery();
-
 			//} catch { }
 
 			DataConn.Close();
-
 		}
 
 		public void Update(IGuest aGuestResponse) {
