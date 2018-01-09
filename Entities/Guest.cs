@@ -9,5 +9,10 @@
 		public string Phone { get; set; }
 		public bool? WillAttend { get; set; }
 
+		public override string ToString() {
+
+			return "('" + Name + "','" + Email + "','" + Phone + "','" + WillAttend +  "');
+		}
+
 	}
 }

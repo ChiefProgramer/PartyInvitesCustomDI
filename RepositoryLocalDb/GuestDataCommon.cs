@@ -29,23 +29,15 @@ namespace RepositoryDataCommon {
 		}
 
 		public void Add(IGuest aGuestResponse) {
-			IDbConnection DataConn = mDataConnector.Connection();
-			IDbCommand DBcmd = DataConn.CreateCommand();
-
-			//try {
-			DBcmd.CommandText = "";
-			DBcmd.ExecuteNonQuery();
-			//} catch { }
-
-			DataConn.Close();
+			ExecuteNonQuery("insert into Guests (name, email, phone, WillAttend) values" + aGuestResponse.ToString() + ";");
 		}
 
 		public void Update(IGuest aGuestResponse) {
 			throw new NotImplementedException();
 		}
 
-		public void Delete(int aGuesResponseId) {
-			throw new NotImplementedException();
+		public void Delete(int aGuestResponseId) {
+			ExecuteNonQuery("DELETE FROM Guests WHERE id =" + aGuestResponseId);
 		}
 
 		public IGuest Get(int aGuestResponseId) {
@@ -53,6 +45,22 @@ namespace RepositoryDataCommon {
 		}
 
 		public List<IGuest> GetAll() { throw new NotImplementedException(); }
+
+		private bool ExecuteNonQuery(string aCommandText) {
+			IDbConnection DataConn = mDataConnector.Connection();
+			IDbCommand DBcmd = DataConn.CreateCommand();
+
+			try {
+			DBcmd.CommandText = aCommandText;
+			DBcmd.ExecuteNonQuery();
+			} catch {
+				DataConn.Close();
+				return false;
+			}
+		
+			DataConn.Close();
+			return true;
+		}
 
 
 	}
