@@ -1,7 +1,9 @@
-﻿	using System;
-	using System.Collections.Generic;
-	using Contracts;
-	using Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using Contracts;
+using Entities;
 
 
 
@@ -15,7 +17,7 @@ namespace RepositoryDataCommon {
 			mDataConnector = new DataConnector(aReopConnection);
 			mDbCreator = new DbCreator(mDataConnector);
 
-			try {mDbCreator.CreateDB();}
+			try { mDbCreator.CreateDB(); }
 			catch { }
 
 			mDbCreator.CreateTables();
@@ -23,11 +25,25 @@ namespace RepositoryDataCommon {
 
 		public int Count() {
 			throw new NotImplementedException();
-			  
+
 		}
 
 		public void Add(IGuest aGuestResponse) {
-			throw new NotImplementedException();
+			IDbConnection DataConn = mDataConnector.Connection();
+			IDbCommand DBcmd = DataConn.CreateCommand();
+
+			//try {
+
+
+			IDataAdapter adapter = mDataConnector.DataAdapter();
+
+			DBcmd.CommandText = "";
+			DBcmd.ExecuteNonQuery();
+
+			//} catch { }
+
+			DataConn.Close();
+
 		}
 
 		public void Update(IGuest aGuestResponse) {

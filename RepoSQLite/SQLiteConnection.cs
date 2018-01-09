@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using System;
 using System.Data;
+using System.Data.Common;
 using System.Data.SQLite;
 using System.IO;
 
@@ -22,6 +23,12 @@ namespace RepoSQLite
 			var vConnection = new SQLiteConnection(aConnectionString);
 
 			return (vConnection);
+		}
+
+		public IDataAdapter DataAdapter() { //Not sure about this
+			SQLiteDataAdapter vDataAdapter = new SQLiteDataAdapter();
+
+			return vDataAdapter;
 		}
 
 		public string ConnectionString {
