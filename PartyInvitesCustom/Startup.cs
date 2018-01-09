@@ -9,6 +9,9 @@
 	using RepositoryDataCommon;
 	using RepositoryMemory;
 	using ReopMySQL;
+	using RepoSQLite;
+
+
 
 	public class Startup {
 		public Startup(IConfiguration configuration) {
@@ -21,7 +24,7 @@
 			services.AddSingleton<IGuestR, StartGuestDataCommon>();
 			services.AddSingleton<IGuests, Guests>();
 			services.AddSingleton<IGuest, Guest>();
-			services.AddSingleton<IReopConnection, MySQLConnection>();
+			services.AddSingleton<IReopConnection, SqliteConnection>();
 			services.AddMvc();
 		}
 

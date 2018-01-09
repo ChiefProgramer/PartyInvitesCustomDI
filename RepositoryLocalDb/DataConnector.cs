@@ -20,7 +20,11 @@ namespace RepositoryDataCommon {
 		}
 
 		public string DbConnectionString { 
-			get { return ReopConnection.ConnectionString + "; database =" + ReopConnection.DatabaseName; }
+			get {
+				string dbName = "";
+				if (ReopConnection.DatabaseName != "") dbName = "; database =" + ReopConnection.DatabaseName;
+
+				return ReopConnection.ConnectionString + dbName; }
 		}
 
 		public string DatabaseName {

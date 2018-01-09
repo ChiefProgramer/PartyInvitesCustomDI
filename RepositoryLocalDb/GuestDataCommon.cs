@@ -14,7 +14,10 @@ namespace RepositoryDataCommon {
 		public void StartUp(IReopConnection aReopConnection) {
 			mDataConnector = new DataConnector(aReopConnection);
 			mDbCreator = new DbCreator(mDataConnector);
-			mDbCreator.CreateDB();
+
+			try {mDbCreator.CreateDB();}
+			catch { }
+
 			mDbCreator.CreateTables();
 		}
 

@@ -38,3 +38,5 @@ C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\ne
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryDataCommon.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryDataCommon.pdb
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoMySQL.pdb
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoSQLite.dll
+C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoSQLite.pdb

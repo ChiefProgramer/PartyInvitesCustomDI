@@ -6,11 +6,11 @@ using System.IO;
 
 namespace RepoSQLite
 {
-    public class SqliteConnection : IReopConnection {
+    public class SqliteConnection : IReopConnection { 
 
 		const string m_DbFileName = "SQLiteDB.sqlite";
-		const string m_ConnectionString = m_DbFileName;
-		const string m_Database = "Party";
+		const string m_ConnectionString = "Data Source=" + m_DbFileName + ";";
+		const string m_Database = "";
 
 
 		public IDbConnection Connection(string aConnectionString) {

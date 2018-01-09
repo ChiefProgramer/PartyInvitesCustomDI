@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "7dca348263cdbd604132cd343d3061078450d94f"
+    "signature": "73b94be3fff67ce34924175a84f27df25939a628"
   },
   "compilationOptions": {
     "defines": [
@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1",
+          "RepoSQLite": "1.0.0",
           "RepositoryDataCommon": "1.0.0",
           "RepositoryMemory": "1.0.0"
         },
@@ -3040,6 +3041,14 @@
           "ref/netstandard2.0/System.Data.SqlClient.dll": {}
         }
       },
+      "System.Data.SQLite.Core/1.0.106": {
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        },
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -4160,6 +4169,18 @@
         },
         "compile": {
           "RepositoryMemory.dll": {}
+        }
+      },
+      "RepoSQLite/1.0.0": {
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "System.Data.SQLite.Core": "1.0.106"
+        },
+        "runtime": {
+          "RepoSQLite.dll": {}
+        },
+        "compile": {
+          "RepoSQLite.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -5921,6 +5942,13 @@
       "path": "system.data.sqlclient/4.4.0",
       "hashPath": "system.data.sqlclient.4.4.0.nupkg.sha512"
     },
+    "System.Data.SQLite.Core/1.0.106": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-em8AP6Sm96brGCwP5Y1aYzzmuemqO02jfc2BrASGoafSqElOBDfIxR5UTvVgt8Ic65o1zB9hctT/zOQxMgI5TA==",
+      "path": "system.data.sqlite.core/1.0.106",
+      "hashPath": "system.data.sqlite.core.1.0.106.nupkg.sha512"
+    },
     "System.Diagnostics.Contracts/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -6523,6 +6551,11 @@
       "sha512": ""
     },
     "RepositoryMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RepoSQLite/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
