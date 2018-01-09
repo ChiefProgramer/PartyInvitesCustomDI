@@ -5112,6 +5112,35 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
+      "RepoMySQL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoMySQL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoMySQL.dll": {}
+        }
+      },
+      "RepositoryDataCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Entities": "1.0.0",
+          "MySql.Data": "6.10.5",
+          "RepoMySQL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepositoryDataCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepositoryDataCommon.dll": {}
+        }
+      },
       "RepositoryMemory/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -5124,21 +5153,6 @@
         },
         "runtime": {
           "bin/placeholder/RepositoryMemory.dll": {}
-        }
-      },
-      "RepositoryMySql/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Contracts": "1.0.0",
-          "Entities": "1.0.0",
-          "MySql.Data": "6.10.5"
-        },
-        "compile": {
-          "bin/placeholder/RepositoryMySql.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RepositoryMySql.dll": {}
         }
       }
     }
@@ -13393,15 +13407,20 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "RepoMySQL/1.0.0": {
+      "type": "project",
+      "path": "../MySQL/RepoMySQL.csproj",
+      "msbuildProject": "../MySQL/RepoMySQL.csproj"
+    },
+    "RepositoryDataCommon/1.0.0": {
+      "type": "project",
+      "path": "../RepositoryLocalDb/RepositoryDataCommon.csproj",
+      "msbuildProject": "../RepositoryLocalDb/RepositoryDataCommon.csproj"
+    },
     "RepositoryMemory/1.0.0": {
       "type": "project",
       "path": "../RepositoryMemory/RepositoryMemory.csproj",
       "msbuildProject": "../RepositoryMemory/RepositoryMemory.csproj"
-    },
-    "RepositoryMySql/1.0.0": {
-      "type": "project",
-      "path": "../RepositoryLocalDb/RepositoryMySql.csproj",
-      "msbuildProject": "../RepositoryLocalDb/RepositoryMySql.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13411,8 +13430,8 @@
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1",
-      "RepositoryMemory >= 1.0.0",
-      "RepositoryMySql >= 1.0.0"
+      "RepositoryDataCommon >= 1.0.0",
+      "RepositoryMemory >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13457,11 +13476,11 @@
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryMySql.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryMySql.csproj"
-            },
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj"
             }
           }
         }

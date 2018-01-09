@@ -2,8 +2,9 @@
 	using System.Collections.Generic;
 	using Entities;
 
-	public interface IGuestR { 
+	public interface IGuestR {
 
+		void StartUp(IReopConnection aReopConnection);
 		int Count();
 		void Add(IGuest aGuest);
 		void Update(IGuest aGuest);

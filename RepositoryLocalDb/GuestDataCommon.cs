@@ -2,16 +2,20 @@
 	using System.Collections.Generic;
 	using Contracts;
 	using Entities;
-	using MySql.Data.MySqlClient;
 
 
-namespace RepositoryMySql {
 
-	public class GuestMySql : IGuestR {
+namespace RepositoryDataCommon {
 
-		public GuestMySql() {
-			DbCreator.CreateDB();
-			DbCreator.CreateTables();
+	public class StartGuestDataCommon : IGuestR {
+		DbCreator mDbCreator;
+		DataConnector mDataConnector;
+
+		public void StartUp(IReopConnection aReopConnection) {
+			mDataConnector = new DataConnector(aReopConnection);
+			mDbCreator = new DbCreator(mDataConnector);
+			mDbCreator.CreateDB();
+			mDbCreator.CreateTables();
 		}
 
 		public int Count() {
@@ -36,6 +40,7 @@ namespace RepositoryMySql {
 		}
 
 		public List<IGuest> GetAll() { throw new NotImplementedException(); }
+
 
 	}
 }

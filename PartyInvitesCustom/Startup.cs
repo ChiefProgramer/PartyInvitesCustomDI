@@ -6,7 +6,9 @@
 	using Microsoft.Extensions.Configuration;
 	using Microsoft.Extensions.DependencyInjection;
 	using PartyInvitesCustom.Orchestrators;
+	using RepositoryDataCommon;
 	using RepositoryMemory;
+	using ReopMySQL;
 
 	public class Startup {
 		public Startup(IConfiguration configuration) {
@@ -16,9 +18,10 @@
 		// This method gets called by the runtime. Use this method to add services 
 		// to the container.
 		public void ConfigureServices(IServiceCollection services) {
-			services.AddSingleton<IGuestR, GuestR>();
+			services.AddSingleton<IGuestR, StartGuestDataCommon>();
 			services.AddSingleton<IGuests, Guests>();
 			services.AddSingleton<IGuest, Guest>();
+			services.AddSingleton<IReopConnection, MySQLConnection>();
 			services.AddMvc();
 		}
 

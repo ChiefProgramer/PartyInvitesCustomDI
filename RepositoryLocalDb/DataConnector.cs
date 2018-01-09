@@ -1,33 +1,41 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Contracts;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Text;
 
-namespace RepositoryMySql {
-	public static class DataConnector {
-		private static string m_ConnectionString = "server=localhost;user id=root;password=596b8c4dfd9207b6;persistsecurityinfo=True;port=3305";
-		private static string m_Database = "Party";
+namespace RepositoryDataCommon { 
 
-		public static string ConnectionString {
-			get { return m_ConnectionString; }
+
+	public class DataConnector {
+		private IReopConnection ReopConnection;
+
+		public DataConnector(IReopConnection aReopConnection) {
+			ReopConnection = aReopConnection;
 		}
 
-		public static string DbConnectionString { 
-			get { return m_ConnectionString +"; database =" + m_Database; }
+		public string ConnectionString {
+			get { return ReopConnection.ConnectionString; }
 		}
 
-		public static string DatabaseName {
-			get { return m_Database; }
+		public string DbConnectionString { 
+			get { return ReopConnection.ConnectionString + "; database =" + ReopConnection.DatabaseName; }
 		}
 
-		public static MySqlConnection Connection() {
-			var vConnection = new MySqlConnection {ConnectionString = DbConnectionString};
+		public string DatabaseName {
+			get { return ReopConnection.DatabaseName; }
+		}
+
+		public IDbConnection Connection() {
+			var vConnection = ReopConnection.Connection(DbConnectionString);
 
 			return (vConnection);
 		}
 
-		public static MySqlConnection Connection(string aConnectionString) {
-			var vConnection = new MySqlConnection { ConnectionString = aConnectionString };
+		public IDbConnection Connection(string aConnectionString) {
+
+			var vConnection = ReopConnection.Connection(aConnectionString);
 
 			return (vConnection);
 		}

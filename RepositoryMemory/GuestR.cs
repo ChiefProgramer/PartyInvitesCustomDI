@@ -32,5 +32,8 @@
 
 		public List<IGuest> GetAll() { return _Storage; }
 
+		public void StartUp(IReopConnection aReopConnection) {
+			
+		}
 	}
 }
