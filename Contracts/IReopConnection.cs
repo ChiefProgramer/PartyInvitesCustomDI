@@ -9,7 +9,6 @@ namespace Contracts
    public interface IReopConnection {
 
 		IDbConnection Connection(string aConnectionString);
-		IDataAdapter DataAdapter(); //Not sure about this
 		string ConnectionString { get; }
 		string DatabaseName { get; }
 

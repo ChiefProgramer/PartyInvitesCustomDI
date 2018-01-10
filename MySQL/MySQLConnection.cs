@@ -19,13 +19,6 @@ namespace ReopMySQL
 			return (vConnection);
 		}
 
-		public IDataAdapter DataAdapter() { //Not sure about this
-			MySqlDataAdapter vDataAdapter = new MySqlDataAdapter();
-
-			return vDataAdapter;
-		}
-
-
 		public string ConnectionString {
 			get {return m_ConnectionString;}
 		}

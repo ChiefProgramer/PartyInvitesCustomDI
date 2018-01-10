@@ -25,12 +25,6 @@ namespace RepoSQLite
 			return (vConnection);
 		}
 
-		public IDataAdapter DataAdapter() { //Not sure about this
-			SQLiteDataAdapter vDataAdapter = new SQLiteDataAdapter();
-
-			return vDataAdapter;
-		}
-
 		public string ConnectionString {
 			get { return m_ConnectionString; }
 		}
