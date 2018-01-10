@@ -11,7 +11,7 @@
 
 		public override string ToString() {
 
-			return "('" + Name + "','" + Email + "','" + Phone + "','" + WillAttend +  "')";
+			return "'" + Name + "','" + Email + "','" + Phone + "','" + WillAttend +  "'";
 		}
 
 	}

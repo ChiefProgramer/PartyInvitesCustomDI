@@ -29,7 +29,7 @@ namespace RepositoryDataCommon {
 		}
 
 		public void Add(IGuest aGuestResponse) {
-			ExecuteNonQuery("insert into Guests (name, email, phone, WillAttend) values" + aGuestResponse.ToString() + ";");
+			ExecuteNonQuery("insert into Guests (name, email, phone, WillAttend) values(" + aGuestResponse.ToString() + ");");
 		}
 
 		public void Update(IGuest aGuestResponse) {
