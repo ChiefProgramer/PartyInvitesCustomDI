@@ -21,9 +21,9 @@
 		// This method gets called by the runtime. Use this method to add services 
 		// to the container.
 		public void ConfigureServices(IServiceCollection services) {
-			services.AddSingleton<IGuestR, StartGuestDataCommon>();
-			services.AddSingleton<IGuests, Guests>();
-			services.AddSingleton<IGuest, Guest>();
+			services.AddSingleton<IGuestR, GuestDataCommon>();
+			services.AddTransient<IGuests, Guests>();
+			services.AddTransient<IGuest, Guest>();
 			services.AddSingleton<IReopConnection, SqliteConnection>();
 			services.AddMvc();
 		}

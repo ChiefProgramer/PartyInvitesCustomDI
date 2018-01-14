@@ -37,10 +37,6 @@ namespace RepositoryDataCommon {
 			return (vConnection);
 		}
 
-		public IDataAdapter DataAdapter() { //Not sure about this
-			return ReopConnection.DataAdapter();
-		}
-
 		public IDbConnection Connection(string aConnectionString) {
 
 			var vConnection = ReopConnection.Connection(aConnectionString);
