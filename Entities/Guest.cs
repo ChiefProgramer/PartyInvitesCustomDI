@@ -14,8 +14,9 @@
 		public bool? WillAttend { get; set; }
 
 		public override string ToString() {
-
-			return "'" + Name + "','" + Email + "','" + Phone + "','" + WillAttend +  "'";
+			System.Diagnostics.Debug.Print("'" + Name + "','" + Email + "','" + Phone + "','" + WillAttend.ToString() + "'");
+			return "'" + Name + "','" + Email + "','" + Phone + "','" + WillAttend.ToString() +  "'";
+			
 		}
 
 	}

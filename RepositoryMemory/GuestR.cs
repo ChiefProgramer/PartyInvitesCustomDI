@@ -35,5 +35,9 @@
 		public void StartUp(IReopConnection aReopConnection) {
 			
 		}
+
+		public void StartUp(IReopConnection aReopConnection, IGuest aGuest) {
+			throw new NotImplementedException();
+		}
 	}
 }

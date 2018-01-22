@@ -47,20 +47,59 @@ namespace RepositoryDataCommon {
 
 			//Use SQL to get data; Set poperties on Guest object
 
+			IDbConnection DataConn = mDataConnector.Connection();
+			IDbCommand DBcmd = DataConn.CreateCommand();
+			DataConn.Open();
+
+			DBcmd.CommandText = "SELECT * From Guests WHERE id = aGuestId";
+
+			var vReader = DBcmd.ExecuteReader();
+
+			if (vReader.Read()) {
+				aGuest.Name = vReader.GetString(0);
+				aGuest.Email = vReader.GetString(1);
+				aGuest.Phone = vReader.GetString(2);
+				string vWillAttend = vReader.GetString(2);
+				if (vWillAttend == "True") {
+					aGuest.WillAttend = true;
+				}
+				else {
+					aGuest.WillAttend = false;
+				}
+
+			}
+
+			DataConn.Close();
 			return aGuest;
 		}
 
 		public List<IGuest> GetAll() {
 			List<IGuest> aGuestList = new List<IGuest>();
+			IDbConnection DataConn = mDataConnector.Connection();
+			IDbCommand DBcmd = DataConn.CreateCommand();
+			DataConn.Open();
 
-			//Do some loop with SOL
+			DBcmd.CommandText = "SELECT * From Guests";
 
+			var vReader = DBcmd.ExecuteReader();
 
-			IGuest aGuest = mGuest.ShallowCopy(); // Get a new copy of Guest object
+			while (vReader.Read()) {
+				IGuest aGuest = mGuest.ShallowCopy(); // Get a new copy of Guest object
+				aGuest.Name = vReader.GetString(1);
+				aGuest.Email = vReader.GetString(2);
+				aGuest.Phone = vReader.GetString(3);
+				string vWillAttend = vReader.GetString(4);
+				if (vWillAttend.ToLower() == "true") {
+					aGuest.WillAttend = true;
+				}
+				else {
+					aGuest.WillAttend = false;
+				}
 
+				aGuestList.Add(aGuest);
+			}
 
-			//Finish Loop
-
+			DataConn.Close();
 			return aGuestList;
 
 		}
@@ -68,6 +107,7 @@ namespace RepositoryDataCommon {
 		private bool ExecuteNonQuery(string aCommandText) {
 			IDbConnection DataConn = mDataConnector.Connection();
 			IDbCommand DBcmd = DataConn.CreateCommand();
+			DataConn.Open();
 
 			try {
 			DBcmd.CommandText = aCommandText;
