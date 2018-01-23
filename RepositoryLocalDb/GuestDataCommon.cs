@@ -56,18 +56,11 @@ namespace RepositoryDataCommon {
 			var vReader = DBcmd.ExecuteReader();
 
 			if (vReader.Read()) {
-				aGuest.Name = vReader.GetString(0);
-				aGuest.Email = vReader.GetString(1);
-				aGuest.Phone = vReader.GetString(2);
-				string vWillAttend = vReader.GetString(2);
-				if (vWillAttend.ToLower() == "true") {
-					aGuest.WillAttend = true;
-				}
-				else {
-					aGuest.WillAttend = false;
-				}
 
+				aGuest = MapReaderToGuest(vReader, aGuest);
 			}
+
+			
 
 			DataConn.Close();
 			return aGuest;
@@ -85,16 +78,8 @@ namespace RepositoryDataCommon {
 
 			while (vReader.Read()) {
 				IGuest aGuest = mGuest.ShallowCopy(); // Get a new copy of Guest object
-				aGuest.Name = vReader.GetString(1);
-				aGuest.Email = vReader.GetString(2);
-				aGuest.Phone = vReader.GetString(3);
-				string vWillAttend = vReader.GetString(4);
-				if (vWillAttend.ToLower() == "true") {
-					aGuest.WillAttend = true;
-				}
-				else {
-					aGuest.WillAttend = false;
-				}
+
+				aGuest = MapReaderToGuest(vReader, aGuest);
 
 				aGuestList.Add(aGuest);
 			}
@@ -119,6 +104,22 @@ namespace RepositoryDataCommon {
 		
 			DataConn.Close();
 			return true;
+		}
+
+		private IGuest MapReaderToGuest(IDataReader aReader,IGuest aGuest) {
+
+			aGuest.Name = aReader.GetString(1);
+			aGuest.Email = aReader.GetString(2);
+			aGuest.Phone = aReader.GetString(3);
+			string vWillAttend = aReader.GetString(4);
+			if (vWillAttend.ToLower() == "true") {
+				aGuest.WillAttend = true;
+			}
+			else {
+				aGuest.WillAttend = false;
+			}
+
+			return aGuest;
 		}
 
 
