@@ -60,7 +60,7 @@ namespace RepositoryDataCommon {
 				aGuest.Email = vReader.GetString(1);
 				aGuest.Phone = vReader.GetString(2);
 				string vWillAttend = vReader.GetString(2);
-				if (vWillAttend == "True") {
+				if (vWillAttend.ToLower() == "true") {
 					aGuest.WillAttend = true;
 				}
 				else {
