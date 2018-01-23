@@ -9,7 +9,7 @@ namespace RepositoryDataCommon {
 
    public class DbCreator {
 
-		DataConnector mDataConnector;
+		private DataConnector mDataConnector;
 
 		public DbCreator(DataConnector aDataConnector) {
 			mDataConnector = aDataConnector;

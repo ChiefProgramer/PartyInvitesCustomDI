@@ -10,9 +10,9 @@ using Entities;
 namespace RepositoryDataCommon {
 
 	public class GuestDataCommon : IGuestR {
-		DbCreator mDbCreator;
-		DataConnector mDataConnector;
-		IGuest mGuest; //No DI needed in this project; We can use a sigle DI provided by Core 
+		private DbCreator mDbCreator;
+		private DataConnector mDataConnector;
+		private IGuest mGuest; //No DI needed in this project; We can use a sigle DI provided by Core 
 
 		public void StartUp(IReopConnection aReopConnection, IGuest aGuest) {
 			mDataConnector = new DataConnector(aReopConnection);
