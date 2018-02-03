@@ -51,13 +51,11 @@ namespace RepositoryDataCommon {
 		public IGuest Get(int aGuestId) {
 
 			//Use SQL to get data; Set poperties on Guest object
-
 			var vReader = GetReader("SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
 
 			IGuest aGuest = new Guest();
 
 			if (vReader.Read()) {
-
 				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
 			}
 
@@ -70,10 +68,9 @@ namespace RepositoryDataCommon {
 			var vReader = GetReader("SELECT * From Guests"); //Execute SQL returns IDataReader
 
 			while (vReader.Read()) {
-				IGuest aGuest = new Guest(); // Get a new copy of Guest object
+				IGuest aGuest = new Guest(); 
 
-				aGuest = MapReaderToGuest(vReader, aGuest);
-
+				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
 				aGuestList.Add(aGuest);
 			}
 
