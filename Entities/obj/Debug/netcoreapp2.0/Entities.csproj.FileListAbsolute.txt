@@ -16,3 +16,12 @@ C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.dll
 C:\Users\R-Gen\Source\Repos\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.pdb
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.deps.json
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.dll
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.pdb
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.csprojResolveAssemblyReference.cache
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.csproj.CoreCompileInputs.cache
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfoInputs.cache
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.dll
+D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.pdb

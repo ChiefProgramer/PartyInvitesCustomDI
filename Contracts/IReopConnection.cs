@@ -6,8 +6,8 @@ using System.Text;
 
 namespace Contracts
 {
-   public interface IReopConnection {
-
+   public interface IRepoConnection {
+		
 		IDbConnection Connection(string aConnectionString);
 		string ConnectionString { get; }
 		string DatabaseName { get; }

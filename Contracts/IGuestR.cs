@@ -4,7 +4,6 @@
 
 	public interface IGuestR {
 
-		void StartUp(IReopConnection aReopConnection, IGuest aGuest);
 		int Count();
 		void Add(IGuest aGuest);
 		void Update(IGuest aGuest);

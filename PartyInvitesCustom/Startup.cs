@@ -23,8 +23,7 @@
 		public void ConfigureServices(IServiceCollection services) {
 			services.AddSingleton<IGuestR, GuestDataCommon>();
 			services.AddTransient<IGuests, Guests>();
-			services.AddTransient<IGuest, Guest>();
-			services.AddSingleton<IReopConnection, SqliteConnection>();
+			services.AddSingleton<IRepoConnection, SqliteConnection>();
 			services.AddMvc();
 		}
 

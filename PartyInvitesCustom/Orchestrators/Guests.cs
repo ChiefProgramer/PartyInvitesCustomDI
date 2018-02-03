@@ -13,12 +13,10 @@ namespace PartyInvitesCustom.Orchestrators
 
 		private readonly IGuestR _Repository; //Its a Singleton, so this is just reference to a single instance
 
-		public Guests(IGuestR aGuestR, IReopConnection aReopConnection, IGuest aGuest) {
+		public Guests(IGuestR aGuestR, IRepoConnection aReopConnection) {
 			_Repository =
 				aGuestR
 					?? throw new ArgumentNullException(nameof(aGuestR));
-
-			_Repository.StartUp(aReopConnection, aGuest);
 		}
 
 		public void Add(GuestResponse aGuestResponse) {

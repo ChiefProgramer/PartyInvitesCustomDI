@@ -9,43 +9,45 @@ namespace RepositoryDataCommon {
 
 
 	public class DataConnector {
-		private IReopConnection ReopConnection;
+		private IRepoConnection RepoConnection;
 
-		public DataConnector(IReopConnection aReopConnection) {
-			ReopConnection = aReopConnection;
+		public DataConnector(IRepoConnection aRepoConnection) {
+			RepoConnection = aRepoConnection;
 		}
 
+		//Returns connection string
 		public string ConnectionString {
-			get { return ReopConnection.ConnectionString; }
+			get { return RepoConnection.ConnectionString; }
 		}
 
+		//Returns connection string with Database name
 		public string DbConnectionString { 
 			get {
 				string dbName = "";
-				if (ReopConnection.DatabaseName != "") dbName = "; database =" + ReopConnection.DatabaseName;
+				if (RepoConnection.DatabaseName != "") dbName = "; database =" + RepoConnection.DatabaseName;
 
-				return ReopConnection.ConnectionString + dbName; }
+				return RepoConnection.ConnectionString + dbName; }
 		}
 
+		//Returns Database name
 		public string DatabaseName {
-			get { return ReopConnection.DatabaseName; }
+			get { return RepoConnection.DatabaseName; }
 		}
 
+		//Returns Open IDbconnection
 		public IDbConnection Connection() {
-			var vConnection = ReopConnection.Connection(DbConnectionString);
+			var vConnection = RepoConnection.Connection(DbConnectionString);
+			vConnection.Open();
 
 			return (vConnection);
 		}
 
+		//Take connection string returns IDbconnection 
 		public IDbConnection Connection(string aConnectionString) {
 
-			var vConnection = ReopConnection.Connection(aConnectionString);
+			var vConnection = RepoConnection.Connection(aConnectionString);
 
 			return (vConnection);
 		}
-
-
 	}
-
-
 }

@@ -12,18 +12,24 @@ namespace RepositoryDataCommon {
 	public class GuestDataCommon : IGuestR {
 		private DbCreator mDbCreator;
 		private DataConnector mDataConnector;
-		private IGuest mGuest; //No DI needed in this project; We can use a sigle DI provided by Core 
 
-		public void StartUp(IReopConnection aReopConnection, IGuest aGuest) {
-			mDataConnector = new DataConnector(aReopConnection);
+		public GuestDataCommon(IRepoConnection aRepoConnection) {
+			mDataConnector = new DataConnector(aRepoConnection); 
 			mDbCreator = new DbCreator(mDataConnector);
-			mGuest = aGuest; 
+
+			StartUp();
+		}
+
+		//this creates DB and add tables... if needed
+		public void StartUp() {
 
 			try { mDbCreator.CreateDB(); }
-			catch { }
+			catch { } //if this fails its becasue we did not need to do this 
 
 			mDbCreator.CreateTables();
 		}
+
+
 
 		public int Count() {
 			throw new NotImplementedException();
@@ -43,56 +49,56 @@ namespace RepositoryDataCommon {
 		}
 
 		public IGuest Get(int aGuestId) {
-			IGuest aGuest = mGuest.ShallowCopy(); // Get a new copy of Guest object
 
 			//Use SQL to get data; Set poperties on Guest object
 
-			IDbConnection DataConn = mDataConnector.Connection();
-			IDbCommand DBcmd = DataConn.CreateCommand();
-			DataConn.Open();
+			var vReader = GetReader("SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
 
-			DBcmd.CommandText = "SELECT * From Guests WHERE id = aGuestId";
-
-			var vReader = DBcmd.ExecuteReader();
+			IGuest aGuest = new Guest();
 
 			if (vReader.Read()) {
 
-				aGuest = MapReaderToGuest(vReader, aGuest);
+				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
 			}
 
-			
-
-			DataConn.Close();
 			return aGuest;
 		}
 
 		public List<IGuest> GetAll() {
 			List<IGuest> aGuestList = new List<IGuest>();
-			IDbConnection DataConn = mDataConnector.Connection();
-			IDbCommand DBcmd = DataConn.CreateCommand();
-			DataConn.Open();
 
-			DBcmd.CommandText = "SELECT * From Guests";
-
-			var vReader = DBcmd.ExecuteReader();
+			var vReader = GetReader("SELECT * From Guests"); //Execute SQL returns IDataReader
 
 			while (vReader.Read()) {
-				IGuest aGuest = mGuest.ShallowCopy(); // Get a new copy of Guest object
+				IGuest aGuest = new Guest(); // Get a new copy of Guest object
 
 				aGuest = MapReaderToGuest(vReader, aGuest);
 
 				aGuestList.Add(aGuest);
 			}
 
-			DataConn.Close();
 			return aGuestList;
 
 		}
 
-		private bool ExecuteNonQuery(string aCommandText) {
-			IDbConnection DataConn = mDataConnector.Connection();
+
+		//Execute SQL returns IDataReader
+		private IDataReader GetReader(string aSQLstring) {
+
+			List<IGuest> aGuestList = new List<IGuest>();
+			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
 			IDbCommand DBcmd = DataConn.CreateCommand();
-			DataConn.Open();
+
+			DBcmd.CommandText = "aSQLstring";
+			var vReader = DBcmd.ExecuteReader();
+
+			return vReader;
+		}
+
+		//Execute SQL returns ture if sucessful;
+		private bool ExecuteNonQuery(string aCommandText) {
+			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
+			IDbCommand DBcmd = DataConn.CreateCommand();
 
 			try {
 			DBcmd.CommandText = aCommandText;
@@ -106,6 +112,7 @@ namespace RepositoryDataCommon {
 			return true;
 		}
 
+		//Sets poperties on Guest object
 		private IGuest MapReaderToGuest(IDataReader aReader,IGuest aGuest) {
 
 			aGuest.Name = aReader.GetString(1);
