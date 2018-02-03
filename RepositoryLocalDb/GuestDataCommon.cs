@@ -10,30 +10,26 @@ using Entities;
 namespace RepositoryDataCommon {
 
 	public class GuestDataCommon : IGuestR {
-		private DbCreator mDbCreator;
 		private DataConnector mDataConnector;
 
 		public GuestDataCommon(IRepoConnection aRepoConnection) {
 			mDataConnector = new DataConnector(aRepoConnection); 
-			mDbCreator = new DbCreator(mDataConnector);
 
 			StartUp();
 		}
 
 		//this creates DB and add tables... if needed
 		public void StartUp() {
-
+			DbCreator mDbCreator = new DbCreator(mDataConnector);
+		
 			try { mDbCreator.CreateDB(); }
 			catch { } //if this fails its becasue we did not need to do this 
 
 			mDbCreator.CreateTables();
 		}
 
-
-
 		public int Count() {
 			throw new NotImplementedException();
-
 		}
 
 		public void Add(IGuest aGuest) {
@@ -77,7 +73,6 @@ namespace RepositoryDataCommon {
 			}
 
 			return aGuestList;
-
 		}
 
 
