@@ -21,10 +21,9 @@ namespace RepositoryDataCommon {
 		//this creates DB and add tables... if needed
 		public void StartUp() {
 			DbCreator mDbCreator = new DbCreator(mDataConnector);
-		
-			try { mDbCreator.CreateDB(); }
-			catch { } //if this fails its becasue we did not need to do this 
 
+			//if this fails its becasue we did not need to do this 
+			mDbCreator.CreateDB();  
 			mDbCreator.CreateTables();
 		}
 

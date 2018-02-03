@@ -21,25 +21,38 @@ namespace RepositoryDataCommon {
 			IDbConnection vDataConn = mDataConnector.Connection(mDataConnector.ConnectionString);
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
 
+			try { 
 			vDataConn.Open();
 			vDBcmd.CommandText = "CREATE DATABASE IF NOT EXISTS `" + mDataConnector.DatabaseName + "`;";
 			vDBcmd.ExecuteNonQuery();
+
+			} catch {
+				vDBcmd.Dispose();
+				vDataConn.Close();
+				return false;
+			}
+
 			vDBcmd.Dispose();
 			vDataConn.Close();
-
 			return true;
 		}
 		//Creates Tables if needed
 		public bool CreateTables() {
 			IDbConnection vDataConn = mDataConnector.Connection();
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
-
+			try { 
 			vDataConn.Open();
 			vDBcmd.CommandText = "CREATE TABLE IF NOT EXISTS `Guests`(`id` INT AUTO_INCREMENT, `name` TEXT, `email` TEXT, `phone` TEXT, `WillAttend` TEXT, PRIMARY KEY(id))";
 			vDBcmd.ExecuteNonQuery();
+
+			} catch {
+				vDBcmd.Dispose();
+				vDataConn.Close();
+				return false;
+			}
+
 			vDBcmd.Dispose();
 			vDataConn.Close();
-
 			return true;
 		}
 
