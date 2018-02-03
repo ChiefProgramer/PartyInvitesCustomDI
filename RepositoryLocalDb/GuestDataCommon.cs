@@ -92,6 +92,9 @@ namespace RepositoryDataCommon {
 			DBcmd.CommandText = "aSQLstring";
 			var vReader = DBcmd.ExecuteReader();
 
+			DBcmd.Dispose();
+			DataConn.Close();
+
 			return vReader;
 		}
 
@@ -104,10 +107,12 @@ namespace RepositoryDataCommon {
 			DBcmd.CommandText = aCommandText;
 			DBcmd.ExecuteNonQuery();
 			} catch {
+				DBcmd.Dispose();
 				DataConn.Close();
 				return false;
 			}
-		
+
+			DBcmd.Dispose();
 			DataConn.Close();
 			return true;
 		}

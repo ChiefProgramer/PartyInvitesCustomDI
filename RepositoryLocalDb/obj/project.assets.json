@@ -2204,11 +2204,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj",
+      "projectUniqueName": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj",
       "projectName": "RepositoryDataCommon",
-      "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj",
+      "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj",
       "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryLocalDb\\obj\\",
+      "outputPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -2229,14 +2229,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
             },
-            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
             },
-            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj": {
-              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj"
             }
           }
         }

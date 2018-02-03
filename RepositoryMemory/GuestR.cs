@@ -32,11 +32,11 @@
 
 		public List<IGuest> GetAll() { return _Storage; }
 
-		public void StartUp(IReopConnection aReopConnection) {
+		public void StartUp(IRepoConnection aReopConnection) {
 			
 		}
 
-		public void StartUp(IReopConnection aReopConnection, IGuest aGuest) {
+		public void StartUp(IRepoConnection aReopConnection, IGuest aGuest) {
 			throw new NotImplementedException();
 		}
 	}
