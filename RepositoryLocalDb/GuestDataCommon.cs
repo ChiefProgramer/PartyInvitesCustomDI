@@ -53,9 +53,11 @@ namespace RepositoryDataCommon {
 			//Use SQL to get data; Set poperties on Guest object
 			var vReader = GetReader("SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
 
-			IGuest aGuest = new Guest();
+			//if there is nothing to read; return null
+			IGuest aGuest = null; 
 
 			if (vReader.Read()) {
+				aGuest = new Guest();
 				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
 			}
 
@@ -81,8 +83,6 @@ namespace RepositoryDataCommon {
 
 		//Execute SQL returns IDataReader
 		private IDataReader GetReader(string aSQLstring) {
-
-			List<IGuest> aGuestList = new List<IGuest>();
 			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
 			IDbCommand DBcmd = DataConn.CreateCommand();
 
@@ -95,7 +95,7 @@ namespace RepositoryDataCommon {
 			return vReader;
 		}
 
-		//Execute SQL returns ture if sucessful;
+		//Execute SQL returns true if sucessful;
 		private bool ExecuteNonQuery(string aCommandText) {
 			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
 			IDbCommand DBcmd = DataConn.CreateCommand();
