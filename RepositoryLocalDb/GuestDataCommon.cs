@@ -80,7 +80,7 @@ namespace RepositoryDataCommon {
 			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
 			IDbCommand DBcmd = DataConn.CreateCommand();
 
-			DBcmd.CommandText = "aSQLstring";
+			DBcmd.CommandText = aSQLstring;
 			var vReader = DBcmd.ExecuteReader();
 
 			DBcmd.Dispose();
