@@ -76,11 +76,11 @@ namespace RepositoryDataCommon {
 
 
 		//Execute SQL returns IDataReader
-		private IDataReader GetReader(string aSQLstring) {
+		private IDataReader GetReader(string aCommandText) {
 			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
 			IDbCommand DBcmd = DataConn.CreateCommand();
 
-			DBcmd.CommandText = aSQLstring;
+			DBcmd.CommandText = aCommandText;
 			var vReader = DBcmd.ExecuteReader();
 
 			DBcmd.Dispose();
