@@ -4,7 +4,7 @@
 	using Contracts;
 	using Entities;
 
-	public class GuestR : IGuestR {
+	public class GuestRepositoryMemory : IGuestR {
 
 		private static readonly List<IGuest> _Storage =
 			new List<IGuest>();

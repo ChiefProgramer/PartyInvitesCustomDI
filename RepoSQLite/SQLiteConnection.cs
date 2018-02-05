@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Data;
 using System.Data.Common;
@@ -7,18 +8,31 @@ using System.IO;
 
 namespace RepoSQLite
 {
-    public class SqliteConnection : IRepoConnection { 
+    public class SqliteConnection : IRepoConnection {
+		string m_DbFileName; // "SQLiteDB.sqlite";
+		string m_ConnectionString; // "Data Source=" + m_DbFileName + ";"; //Data Source=SQLiteDB.sqlite;
+		string m_Database = "";
 
-		const string m_DbFileName = "SQLiteDB.sqlite";
-		const string m_ConnectionString = "Data Source=" + m_DbFileName + ";";
-		const string m_Database = "";
+		public SqliteConnection(IConfiguration aConfiguration) {
+
+			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:SQLiteConnection");
+			ConnectionString = vConnectionString.Value;
+		}
 
 		public string ConnectionString {
-			get { return m_ConnectionString; }
+			get {
+				return m_ConnectionString;
+			}
+			set {
+				m_ConnectionString = value;
+				m_DbFileName = ParseFileNameFromConnectionString(ConnectionString); //set database name
+			}
+			
 		}
 
 		public string DatabaseName {
 			get { return m_Database; }
+			set { m_Database = value; }
 		}
 
 		//Takes connection string returns SQLiteConnection
@@ -32,6 +46,14 @@ namespace RepoSQLite
 			var vConnection = new SQLiteConnection(aConnectionString);
 
 			return (vConnection);
+		}
+
+		//Parses File Name From Connection String
+		private string ParseFileNameFromConnectionString(string ConnectionString) {
+
+			string vFileName = ConnectionString.Substring(ConnectionString.IndexOf("=") + 1, ConnectionString.Length - ConnectionString.IndexOf("=") - 2);
+
+			return vFileName;
 		}
 
 

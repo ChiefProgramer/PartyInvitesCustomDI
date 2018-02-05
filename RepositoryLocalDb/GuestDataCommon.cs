@@ -44,9 +44,9 @@ namespace RepositoryDataCommon {
 		}
 
 		public IGuest Get(int aGuestId) {
-
 			//Use SQL to get data; Set poperties on Guest object
-			var vReader = GetReader("SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
+			IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
+			var vReader = GetReader(DataConn, "SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
 
 			//if there is nothing to read; return null
 			IGuest aGuest = null; 
@@ -56,13 +56,15 @@ namespace RepositoryDataCommon {
 				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
 			}
 
+			DataConn.Close();
 			return aGuest;
 		}
 
 		public List<IGuest> GetAll() {
 			List<IGuest> aGuestList = new List<IGuest>();
+			IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
 
-			var vReader = GetReader("SELECT * From Guests"); //Execute SQL returns IDataReader
+			var vReader = GetReader(DataConn, "SELECT * From Guests"); //Execute SQL returns IDataReader
 
 			while (vReader.Read()) {
 				IGuest aGuest = new Guest(); 
@@ -71,20 +73,19 @@ namespace RepositoryDataCommon {
 				aGuestList.Add(aGuest);
 			}
 
+			DataConn.Close();
 			return aGuestList;
 		}
 
 
 		//Execute SQL returns IDataReader
-		private IDataReader GetReader(string aCommandText) {
-			IDbConnection DataConn = mDataConnector.Connection(); //Gets open connection to Database
+		private IDataReader GetReader(IDbConnection DataConn, string aCommandText) {
 			IDbCommand DBcmd = DataConn.CreateCommand();
 
 			DBcmd.CommandText = aCommandText;
 			var vReader = DBcmd.ExecuteReader();
 
 			DBcmd.Dispose();
-			DataConn.Close();
 
 			return vReader;
 		}

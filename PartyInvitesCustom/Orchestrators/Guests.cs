@@ -14,9 +14,11 @@ namespace PartyInvitesCustom.Orchestrators
 		private readonly IGuestR _Repository; //Its a Singleton, so this is just reference to a single instance
 
 		public Guests(IGuestR aGuestR, IRepoConnection aReopConnection) {
+
 			_Repository =
 				aGuestR
 					?? throw new ArgumentNullException(nameof(aGuestR));
+
 		}
 
 		public void Add(GuestResponse aGuestResponse) {
@@ -38,5 +40,6 @@ namespace PartyInvitesCustom.Orchestrators
 
 			return(atGuestList);
 		}
+
 	}
 }

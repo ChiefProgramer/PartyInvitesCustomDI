@@ -9,8 +9,8 @@ namespace Contracts
    public interface IRepoConnection {
 		
 		IDbConnection Connection(string aConnectionString);
-		string ConnectionString { get; }
-		string DatabaseName { get; }
+		string ConnectionString { get; set; }
+		string DatabaseName { get; set; }
 
 
 	}

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using PartyInvitesCustom.Orchestrators;
 
 namespace PartyInvitesCustom.Controllers {
@@ -14,6 +15,7 @@ namespace PartyInvitesCustom.Controllers {
 			_Guests = 
 				aGuests
 					?? throw new ArgumentNullException(nameof(aGuests));
+
 		}
 
 		public IActionResult ListResponses() {

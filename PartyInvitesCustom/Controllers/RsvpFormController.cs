@@ -12,14 +12,15 @@ namespace PartyInvitesCustom.Controllers {
 	public class RsvpFormController : Controller {
 		private readonly IGuests _Guests; //Its a Singleton, so this is just reference to a single instance
 
-		public RsvpFormController(IGuests aGuest) {
+		public RsvpFormController (IGuests aGuest) {
 			_Guests =
 				aGuest
 					?? throw new ArgumentNullException(nameof(aGuest));
 		}
 
 		[HttpGet]
-		public ViewResult RsvpForm() { return View(); }
+		
+		public ViewResult RsvpForm() {return View(); }
 
 		[HttpPost]
 		public ViewResult RsvpForm(GuestResponse aGuestResponse) {
@@ -29,5 +30,7 @@ namespace PartyInvitesCustom.Controllers {
 			}
 			return View();
 		}
+
+
 	}
 }

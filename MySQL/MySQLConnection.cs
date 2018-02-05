@@ -7,9 +7,8 @@ using MySql.Data.MySqlClient;
 namespace ReopMySQL
 {
     public class MySQLConnection : IRepoConnection {
-
-		const string m_ConnectionString = "server=localhost;user id=root;password=596b8c4dfd9207b6;persistsecurityinfo=True;port=3305";
-		const string m_Database = "Party";
+		string m_Database = "Party";
+		string m_ConnectionString;
 
 
 		public IDbConnection Connection(string aConnectionString) {
@@ -21,10 +20,12 @@ namespace ReopMySQL
 
 		public string ConnectionString {
 			get {return m_ConnectionString;}
+			set { m_ConnectionString = value; }
 		}
 
 		public string DatabaseName {
 			get {return m_Database;}
+			set { m_Database = value;} 
 		}
 	}
 }
