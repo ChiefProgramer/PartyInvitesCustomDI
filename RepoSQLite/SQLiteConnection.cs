@@ -13,7 +13,12 @@ namespace RepoSQLite
 		string m_ConnectionString; // "Data Source=" + m_DbFileName + ";"; //Data Source=SQLiteDB.sqlite;
 		string m_Database = "";
 
-		public SqliteConnection(IConfiguration aConfiguration) {
+		//I realize using IConfiguration here means this Implementation assumes use with ASP.NET Core
+		//However since constructors are not determined by Interfaces, IRepoConnection makes no such assumption
+		//I feel it is reasonable to either re-implement IRepoConnection for a non(ASP.NET Core) app or,
+		//Sub-class this class and change the constructor to as needed
+
+		public SqliteConnection(IConfiguration aConfiguration) { 
 
 			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:SQLiteConnection");
 			ConnectionString = vConnectionString.Value;
