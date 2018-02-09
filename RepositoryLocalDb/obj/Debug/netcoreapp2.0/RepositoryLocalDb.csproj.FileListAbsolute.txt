@@ -11,3 +11,16 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\ne
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.deps.json
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\RepositoryLocalDb.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Contracts.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Entities.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Contracts.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\bin\Debug\netcoreapp2.0\Entities.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.csprojResolveAssemblyReference.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.csproj.CoreCompileInputs.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfoInputs.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.AssemblyInfo.cs
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\RepositoryLocalDb\obj\Debug\netcoreapp2.0\RepositoryLocalDb.pdb

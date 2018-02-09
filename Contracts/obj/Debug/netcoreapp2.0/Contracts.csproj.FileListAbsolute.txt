@@ -9,3 +9,14 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\bin\Debug\netcoreapp2.0\Contracts.deps.json
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\bin\Debug\netcoreapp2.0\Contracts.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\bin\Debug\netcoreapp2.0\Contracts.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\bin\Debug\netcoreapp2.0\Entities.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\bin\Debug\netcoreapp2.0\Entities.pdb
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.csprojResolveAssemblyReference.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.csproj.CoreCompileInputs.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfoInputs.cache
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
+D:\School\gangplank\newbiesmeetup\partyinvites\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb

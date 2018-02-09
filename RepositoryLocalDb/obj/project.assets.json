@@ -699,8 +699,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R-Gen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Joey\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -709,20 +708,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryLocalDb.csproj",
+      "projectUniqueName": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryLocalDb\\RepositoryLocalDb.csproj",
       "projectName": "RepositoryLocalDb",
-      "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryLocalDb.csproj",
-      "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryLocalDb\\obj\\",
+      "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryLocalDb\\RepositoryLocalDb.csproj",
+      "packagesPath": "C:\\Users\\Joey\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryLocalDb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\R-Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Joey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -734,11 +731,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj"
             },
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Entities\\Entities.csproj"
             }
           }
         }
@@ -755,7 +752,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

@@ -2956,12 +2956,10 @@
       ]
     },
     "System.Collections.Specialized/4.0.1": {
-      "sha512": "/HKQyVP0yH1I0YtK7KJL/28snxHNH/bi+0lgk/+MbURF6ULhAE31MDI+NZDerNWu264YbxklXCCygISgm+HMug==",
+      "sha512": "nFwRWQSOl2kVWmUld96pmXcWs7dnQibZsjQbtp0oQbOgCDfiI/jLeVVVfai2qh/M2bJ6z3kdACeuH6RbJoFkGQ==",
       "type": "package",
       "path": "system.collections.specialized/4.0.1",
       "files": [
-        "System.Collections.Specialized.4.0.1.nupkg.sha512",
-        "System.Collections.Specialized.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2989,7 +2987,9 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._"
+        "ref/xamarinwatchos10/_._",
+        "system.collections.specialized.4.0.1.nupkg.sha512",
+        "system.collections.specialized.nuspec"
       ]
     },
     "System.ComponentModel/4.0.1": {
@@ -3118,7 +3118,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.1.0": {
-      "sha512": "sc/7eVCdxPrp3ljpgTKVaQGUXiW05phNWvtv/m2kocXqrUQvTVWKou1Edas2aDjTThLPZOxPYIGNb/HN0QjURg==",
+      "sha512": "CNXGENnnc/yRXyvFdZ+NDM8Y2CzSVMUavONMc8cYoD95eVfuN8TwrtjfwueVN0TIp1czHL79Z0F/d1nG/Be1Sw==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.1.0",
       "files": [
@@ -3155,7 +3155,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.1.0": {
-      "sha512": "MnDAlaeJZy9pdB5ZdOlwdxfpI+LJQ6e0hmH7d2+y2LkiD8DRJynyDYl4Xxf3fWFm7SbEwBZh4elcfzONQLOoQw==",
+      "sha512": "ivpX/HTCtdSEWUYiK0U/FH2MuYuYRpY7eDw2yZ3VpIls4pzHiMM6aYgAZtl9eZdnUm68ceUwTrOb/NWvqIoD1w==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.1.0",
       "files": [
@@ -5879,8 +5879,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R-Gen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Joey\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5889,20 +5888,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory.Test\\RepositoryMemory.Test.csproj",
+      "projectUniqueName": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory.Test\\RepositoryMemory.Test.csproj",
       "projectName": "RepositoryMemory.Test",
-      "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory.Test\\RepositoryMemory.Test.csproj",
-      "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory.Test\\obj\\",
+      "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory.Test\\RepositoryMemory.Test.csproj",
+      "packagesPath": "C:\\Users\\Joey\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\R-Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Joey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -5914,11 +5911,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj"
             },
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory\\RepositoryMemory.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory\\RepositoryMemory.csproj"
             }
           }
         }
@@ -5934,24 +5931,24 @@
         "dependencies": {
           "FluentAssertions": {
             "target": "Package",
-            "version": "[4.19.4, )"
+            "version": "4.19.4"
           },
-          "Microsoft.NET.Test.Sdk": {
+          "xunit.runner.visualstudio": {
             "target": "Package",
-            "version": "[15.5.0, )"
+            "version": "2.3.1"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "xunit": {
             "target": "Package",
-            "version": "[2.3.1, )"
+            "version": "2.3.1"
           },
-          "xunit.runner.visualstudio": {
+          "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[2.3.1, )"
+            "version": "15.5.0"
           }
         },
         "imports": [

@@ -13197,8 +13197,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R-Gen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Joey\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13207,20 +13206,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
+      "projectUniqueName": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
       "projectName": "PartyInvitesCustom",
-      "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
-      "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\PartyInvitesCustom\\obj\\",
+      "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
+      "packagesPath": "C:\\Users\\Joey\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\PartyInvitesCustom\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\R-Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Joey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13232,17 +13229,17 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Contracts\\Contracts.csproj"
             },
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryLocalDb.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryLocalDb.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory\\RepositoryMemory.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryMemory\\RepositoryMemory.csproj"
             },
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryLocalDb\\RepositoryLocalDb.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\RepositoryLocalDb\\RepositoryLocalDb.csproj"
             },
-            "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
-              "projectPath": "R:\\DEV\\wild\\Core2\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\School\\gangplank\\newbiesmeetup\\partyinvites\\Entities\\Entities.csproj"
             }
           }
         }
@@ -13256,18 +13253,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.All": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.3, )"
+            "version": "2.0.1"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.3"
           }
         },
         "imports": [

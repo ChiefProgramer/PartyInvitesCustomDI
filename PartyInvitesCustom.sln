@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvitesCustom", "PartyInvitesCustom\PartyInvitesCustom.csproj", "{414F2978-D13B-463B-B8F3-6851ABD8182D}"
 EndProject
@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory", "Reposit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLocalDb", "RepositoryLocalDb\RepositoryLocalDb.csproj", "{80EEC824-89EF-4043-AFEF-BAA227EC0DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMySqlDb", "RepositoryMySqlDb\RepositoryMySqlDb.csproj", "{EB5DC78A-51E4-4644-8AB6-721ED74910CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{AF884C7E-7334-47EA-8B7D-CA095C939FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF884C7E-7334-47EA-8B7D-CA095C939FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF884C7E-7334-47EA-8B7D-CA095C939FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
