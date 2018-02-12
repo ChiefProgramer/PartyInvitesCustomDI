@@ -7,9 +7,11 @@
 	using Entities;
 	using Microsoft.AspNetCore.Mvc;
 	using Models;
-	//using RepositoryMemory;
+    using System.Collections.Generic;
 
-	public class HomeController: Controller
+    //using RepositoryMemory;
+
+    public class HomeController: Controller
 	{
 		private readonly IPartyInvitesR _Repository;
 
@@ -25,7 +27,6 @@
 		[HttpGet]
 		public IActionResult Index()
 		{
-			//			return View();
 			int vHour = DateTime.Now.Hour;
 			ViewBag.Greeting = (vHour < 12) ? "Good Morning" : "Good Afternoon";
 			return View("MyIndex");
@@ -34,6 +35,8 @@
 		[HttpGet]
 		public ViewResult RsvpForm() { return View(); }
 
+        //no need for a view model, it won't reduce memory usage right since the method
+        //has already stored the whole aGuestResponse object?
 		[HttpPost]
 		public ViewResult RsvpForm(GuestResponse aGuestResponse)
 		{
@@ -44,6 +47,7 @@
 			}
 			return View();
 		}
+
 
 		public IActionResult Error()
 		{
@@ -58,7 +62,17 @@
 
 		public IActionResult ListResponses()
 		{
-			return View(_Repository.GetAll().Where(r => r.WillAttend == true));
-		}
+            // view model constructor, list of guestreponseyes constructor, repo call to get a list of guestresponseyes
+             return View(
+                 new ListResponsesViewModel(
+                     new List<GuestResponseYes>(
+                         _Repository.GetAllGuestResponseYes()
+                         )
+                     )
+                 );
+
+            //return View(_Repository.GetAllGuestResponseYes());
+            //return View(new ListResponsesViewModel(_Repository.GetAllGuestResponseYes()));
+        }
 	}
 }

@@ -4,6 +4,7 @@
 	using System.Collections.Generic;
 	using Contracts;
 	using Entities;
+    using System.Linq;
 
 	public class PartyInvitesR: IPartyInvitesR
 	{
@@ -38,5 +39,20 @@
 
 		public List<GuestResponse> GetAll() { return _Storage; }
 
-	}
+       
+        public List<GuestResponseYes> GetAllGuestResponseYes()
+        {
+            //selecting only people who said yes
+            List<GuestResponse> responses = _Storage.Where(r => r.WillAttend == true).ToList();
+
+            //creating an empty list to be populated with a loop
+            List<GuestResponseYes> rsvps = new List<GuestResponseYes>();
+
+            foreach(GuestResponse r in responses)
+            {
+                rsvps.Add(new GuestResponseYes(r));
+            }
+            return rsvps;
+        }
+    }
 }

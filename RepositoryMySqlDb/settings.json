@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ],
+  "joeysConnectionString": {
+    "server": "localhost:33061",
+    "database": "PartyInvites",
+    "user": "partyinvitesuser",
+    "password": "K:Qe?&DnE^/8^6t+"
+  },
+  "defaultConnectionString": {
+    "server": "localhost:3306",
+    "database": "PartyInvites",
+    "user": "partyinvitesuser",
+    "password": "K:Qe?&DnE^/8^6t+"
+  }
+}

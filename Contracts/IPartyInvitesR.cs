@@ -11,6 +11,7 @@
 		void Delete(int aGuesResponseId);
 		GuestResponse Get(int aGuestResponseId);
 		List<GuestResponse> GetAll();
+        List<GuestResponseYes> GetAllGuestResponseYes();
 
 	}
 }

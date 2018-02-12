@@ -35,5 +35,9 @@
 
 		public List<GuestResponse> GetAll() { throw new NotImplementedException(); }
 
-	}
+        public List<GuestResponseYes> GetAllGuestResponseYes()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
