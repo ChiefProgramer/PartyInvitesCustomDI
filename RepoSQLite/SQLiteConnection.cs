@@ -48,6 +48,7 @@ namespace RepoSQLite
 				SQLiteConnection.CreateFile(m_DbFileName);
 			}
 
+			//This is where we provide a SQLite implementation of System.Data.IDbConnection
 			var vConnection = new SQLiteConnection(aConnectionString);
 
 			return (vConnection);

@@ -32,10 +32,11 @@ namespace ReopMySQL
 			set { m_Database = value;} 
 		}
 
-		//Takes connection string returns SQLiteConnection
+		//Takes connection string returns MySQLConnection
 		public IDbConnection Connection(string aConnectionString) {
 
-			var vConnection = new MySqlConnection { ConnectionString = aConnectionString };
+			//This is where we provide a MySql implementation of System.Data.IDbConnection
+			var vConnection = new MySqlConnection { ConnectionString = aConnectionString }; 
 
 			return (vConnection);
 		}
