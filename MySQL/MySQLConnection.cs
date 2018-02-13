@@ -18,7 +18,7 @@ namespace ReopMySQL
 
 		public MySQLConnection(IConfiguration aConfiguration) {
 
-			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:SQLiteConnection");
+			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:MySQLConnection");
 			ConnectionString = vConnectionString.Value;
 		}
 
