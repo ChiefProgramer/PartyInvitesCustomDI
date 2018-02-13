@@ -18,10 +18,9 @@
 		// to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-
+            //services.AddSingleton<IPartyInvitesR, PartyInvitesMySqlR>();
 			services.AddSingleton<IPartyInvitesR, PartyInvitesR>();
 			services.AddMvc();
-
 		}
 
 		// This method gets called by the runtime. Use this method to configure the

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLocalDb", "Reposi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMySqlDb", "RepositoryMySqlDb\RepositoryMySqlDb.csproj", "{EB5DC78A-51E4-4644-8AB6-721ED74910CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMySqlDb", "RepositoryMySqlDb\RepositoryMySqlDb.csproj", "{EB5DC78A-51E4-4644-8AB6-721ED74910CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryMySql", "RepositoryMySql\RepositoryMySql.csproj", "{BD40FF2B-F703-4638-8F44-8FC79C534A81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB5DC78A-51E4-4644-8AB6-721ED74910CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD40FF2B-F703-4638-8F44-8FC79C534A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD40FF2B-F703-4638-8F44-8FC79C534A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD40FF2B-F703-4638-8F44-8FC79C534A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD40FF2B-F703-4638-8F44-8FC79C534A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

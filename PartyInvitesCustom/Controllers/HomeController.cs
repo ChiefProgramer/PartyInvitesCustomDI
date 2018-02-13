@@ -62,7 +62,7 @@
 
 		public IActionResult ListResponses()
 		{
-            // view model constructor, list of guestreponseyes constructor, repo call to get a list of guestresponseyes
+            // listresponseseviewmodel constructor, list of guestreponseyes constructor, repo call to get a list of guestresponseyes
              return View(
                  new ListResponsesViewModel(
                      new List<GuestResponseYes>(

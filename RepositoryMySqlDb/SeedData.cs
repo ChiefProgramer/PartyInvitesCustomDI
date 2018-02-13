@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RepositoryMySqlDb
 {
-    class SeedData
+    public class SeedData
     {
         public static void Initialize()
         {
