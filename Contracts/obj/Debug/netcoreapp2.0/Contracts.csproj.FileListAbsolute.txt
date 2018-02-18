@@ -9,14 +9,3 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.deps.json
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csprojResolveAssemblyReference.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csproj.CoreCompileInputs.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfoInputs.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb

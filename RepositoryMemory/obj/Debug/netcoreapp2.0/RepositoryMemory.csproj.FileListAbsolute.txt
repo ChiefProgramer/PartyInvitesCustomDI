@@ -11,16 +11,3 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\net
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\RepositoryMemory.deps.json
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\RepositoryMemory.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\RepositoryMemory.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\Contracts.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\Entities.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\Contracts.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\bin\Debug\netcoreapp2.0\Entities.pdb
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.csprojResolveAssemblyReference.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.csproj.CoreCompileInputs.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.AssemblyInfoInputs.cache
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.AssemblyInfo.cs
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.dll
-D:\RGENWARE\ChiefProgramer\PartyInvitesCustomDI\RepositoryMemory\obj\Debug\netcoreapp2.0\RepositoryMemory.pdb
