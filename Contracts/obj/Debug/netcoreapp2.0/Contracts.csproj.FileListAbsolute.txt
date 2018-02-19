@@ -9,3 +9,14 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.deps.json
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.AssemblyInfo.cs
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Contracts\obj\Debug\netcoreapp2.0\Contracts.pdb

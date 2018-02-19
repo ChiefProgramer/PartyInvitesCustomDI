@@ -7,3 +7,12 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.deps.json
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\Entities\obj\Debug\netcoreapp2.0\Entities.pdb

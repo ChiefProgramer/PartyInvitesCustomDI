@@ -17,3 +17,26 @@ C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\n
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.AssemblyInfo.cs
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.dll
 C:\Users\R-Gen\Desktop\Core2\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.deps.json
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.runtimeconfig.json
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.runtimeconfig.dev.json
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\PartyInvitesCustom.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Contracts.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoMySQL.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryDataCommon.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMemory.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoSQLite.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Contracts.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryDataCommon.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepositoryMemory.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoSQLite.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\bin\Debug\netcoreapp2.0\RepoMySQL.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.AssemblyInfo.cs
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\PartyInvites\Core2Team\PartyInvites5\PartyInvitesCustomDI\PartyInvitesCustom\obj\Debug\netcoreapp2.0\PartyInvitesCustom.pdb
