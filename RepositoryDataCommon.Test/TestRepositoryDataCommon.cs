@@ -39,15 +39,6 @@ namespace RepositoryDataCommon.Test
             set { m_Database = value; }
         }
 
-        //Returns Open IDbconnection
-        //public IDbConnection Connection()
-        //{
-        //    var vConnection = RepoConnection.Connection(DbConnectionString);
-        //    vConnection.Open();
-
-        //    return (vConnection);
-        //}
-
         //Takes connection string returns SQLiteConnection
         public IDbConnection Connection(string aConnectionString)
         {
