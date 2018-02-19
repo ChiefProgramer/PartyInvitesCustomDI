@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R-Gen\\.nuget\\packages\\": {},
+    "C:\\Users\\Owner\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -674,18 +674,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Documents\\Visual Studio 2017\\Projects\\PartyInvites\\Core2Team\\PartyInvites5\\PartyInvitesCustomDI\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\Owner\\Documents\\Visual Studio 2017\\Projects\\PartyInvites\\Core2Team\\PartyInvites5\\PartyInvitesCustomDI\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owner\\Documents\\Visual Studio 2017\\Projects\\PartyInvites\\Core2Team\\PartyInvites5\\PartyInvitesCustomDI\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\R-Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
