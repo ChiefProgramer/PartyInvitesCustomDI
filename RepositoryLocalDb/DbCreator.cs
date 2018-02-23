@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contracts;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -7,16 +8,16 @@ using System.Text;
 
 namespace RepositoryDataCommon {
 
-   public class DbCreator {
+   public class DbCreator { 
 
-		private DataConnector mDataConnector;
+		private IRepoConnection mDataConnector;
 
-		public DbCreator(DataConnector aDataConnector) {
+		public DbCreator(IRepoConnection aDataConnector) {
 			mDataConnector = aDataConnector;
 
 		}
 
-		//Creates Database if needed
+		//Creates Database if needed-
 		public bool CreateDB() {
 			IDbConnection vDataConn = mDataConnector.Connection(mDataConnector.ConnectionString);
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
@@ -41,7 +42,6 @@ namespace RepositoryDataCommon {
 			IDbConnection vDataConn = mDataConnector.Connection();
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
 			try { 
-			vDataConn.Open();
 			vDBcmd.CommandText = "CREATE TABLE IF NOT EXISTS `Guests`(`id` INT AUTO_INCREMENT, `name` TEXT, `email` TEXT, `phone` TEXT, `WillAttend` TEXT, PRIMARY KEY(id))";
 			vDBcmd.ExecuteNonQuery();
 

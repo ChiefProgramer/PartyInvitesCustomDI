@@ -7,11 +7,13 @@ using System.Text;
 namespace Contracts
 {
    public interface IRepoConnection {
-		
-		IDbConnection Connection(string aConnectionString);
+
 		string ConnectionString { get; set; }
+		string DbConnectionString { get; }
 		string DatabaseName { get; set; }
 
+		IDbConnection Connection(string aConnectionString);
+		IDbConnection Connection(); 
 
 	}
 }

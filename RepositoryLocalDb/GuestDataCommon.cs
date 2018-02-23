@@ -10,16 +10,16 @@ using Entities;
 namespace RepositoryDataCommon {
 
 	public class GuestDataCommon : IGuestR {
-		private DataConnector mDataConnector;
+		private IRepoConnection mDataConnector;
 
 		public GuestDataCommon(IRepoConnection aRepoConnection) {
-			mDataConnector = new DataConnector(aRepoConnection); 
+			mDataConnector = aRepoConnection; 
 
-			StartUp();
+			SetupDataBase();
 		}
 
 		//this creates DB and add tables... if needed
-		public void StartUp() {
+		public void SetupDataBase() {
 			DbCreator mDbCreator = new DbCreator(mDataConnector);
 
 			//if this fails its becasue we did not need to do this 
