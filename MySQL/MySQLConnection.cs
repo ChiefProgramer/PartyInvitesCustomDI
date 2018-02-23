@@ -18,8 +18,14 @@ namespace ReopMySQL
 			set { m_ConnectionString = value; }
 		}
 
+		public string DatabaseName {
+			get { return m_Database; }
+			set { m_Database = value; }
+		}
+
+
 		//Returns connection string with Database name
-		public string DbConnectionString {
+		private string DbConnectionString {
 			get {
 				string dbName = "";
 				if (DatabaseName != "") dbName = "; database =" + DatabaseName;
@@ -27,12 +33,6 @@ namespace ReopMySQL
 				return ConnectionString + dbName;
 			}
 		}
-
-		public string DatabaseName {
-			get { return m_Database; }
-			set { m_Database = value; }
-		}
-
 
 		//####	Constuctor
 
