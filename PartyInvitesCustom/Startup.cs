@@ -21,9 +21,15 @@
 		// to the container.
 		public void ConfigureServices(IServiceCollection services) {
 			//Select Which implementation of the Repository to Use
-			SelelctRepoService vSelelctRepoService = new SelelctRepoService(services, Configuration);
+			//SelelctRepoService vSelelctRepoService = new SelelctRepoService(services, Configuration);
+
+			SelelctAndConfigureServices.SelelctRepoService(services, Configuration);
+
 			//Select Which implementation of the ADO connector to Use... if needed
-			ConfigureRepoService vConfigRepoService = new ConfigureRepoService(services, Configuration);
+			//ConfigureRepoService vConfigRepoService = new ConfigureRepoService(services, Configuration);
+
+			SelelctAndConfigureServices.ConfigureRepoService(services, Configuration);
+
 			services.AddTransient<IGuests, Guests>();
 			services.AddSingleton(Configuration);
 			services.AddMvc();
@@ -58,14 +64,11 @@
 
 	}
 
-	public class SelelctRepoService { 
 
-		public SelelctRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
-			SelelctRepository(aServices, aConfiguration);
-		}
+	public static class SelelctAndConfigureServices {
 
 		//Select Which implementation of the Repository to Use
-		private void SelelctRepository(IServiceCollection aServices, IConfiguration aConfiguration) { 
+		public static void SelelctRepoService(IServiceCollection aServices, IConfiguration aConfiguration) { 
 
 			var vDataSource = aConfiguration.GetSection("AppSettings:Repository");
 
@@ -77,19 +80,9 @@
 					aServices.AddSingleton<IGuestR, GuestRepositoryMemory>();
 					break;
 			}
-
-
-		}
-	}
-
-	public class ConfigureRepoService {
-
-		public ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
-			SelelctDataSource(aServices, aConfiguration);
 		}
 
-		//Select Which implementation of the ADO connector to Use
-		private void SelelctDataSource(IServiceCollection aServices, IConfiguration aConfiguration) {
+		public static void ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
 
 			var vDataSource = aConfiguration.GetSection("AppSettings:DataSource");
 
@@ -102,8 +95,58 @@
 					break;
 			}
 
-
 		}
 	}
+
+	//////These Classes Could be added to DI service as Lazy loader for RepoService
+
+	////public class SelelctRepoService { 
+
+	////	public SelelctRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
+	////		SelelctRepository(aServices, aConfiguration);
+	////	}
+
+	////	//Select Which implementation of the Repository to Use
+	////	private void SelelctRepository(IServiceCollection aServices, IConfiguration aConfiguration) { 
+
+	////		var vDataSource = aConfiguration.GetSection("AppSettings:Repository");
+
+	////		switch (vDataSource.Value) {
+	////			case "ADO-DataCommon":
+	////				aServices.AddSingleton<IGuestR, GuestDataCommon>();
+	////				break;
+	////			case "Memory":
+	////				aServices.AddSingleton<IGuestR, GuestRepositoryMemory>();
+	////				break;
+	////		}
+
+
+	////	}
+	////}
+
+	////public class ConfigureRepoService {
+
+	////	public ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
+	////		SelelctDataSource(aServices, aConfiguration);
+	////	}
+
+	////	//Select Which implementation of the ADO connector to Use
+	////	private void SelelctDataSource(IServiceCollection aServices, IConfiguration aConfiguration) {
+
+	////		var vDataSource = aConfiguration.GetSection("AppSettings:DataSource");
+
+	////		switch (vDataSource.Value) {
+	////			case "SQLite":
+	////				aServices.AddSingleton<IRepoConnection, SqliteConnection>();
+	////				break;
+	////			case "MySQL":
+	////				aServices.AddSingleton<IRepoConnection, MySQLConnection>();
+	////				break;
+	////		}
+
+
+	////	}
+	////}
+
 
 }
