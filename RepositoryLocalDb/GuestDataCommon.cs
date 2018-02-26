@@ -28,7 +28,16 @@ namespace RepositoryDataCommon {
 		}
 
 		public int Count() {
-			throw new NotImplementedException();
+			int vRecordCount;
+			IDbConnection DataConn = mDataConnector.Connection();
+			IDbCommand DBcmd = DataConn.CreateCommand();
+
+			DBcmd.CommandText = "SELECT COUNT(*) From Guests";
+
+			vRecordCount = int.Parse(DBcmd.ExecuteScalar().ToString());
+
+			DataConn.Close();
+			return vRecordCount;
 		}
 
 		public void Add(IGuest aGuest) {

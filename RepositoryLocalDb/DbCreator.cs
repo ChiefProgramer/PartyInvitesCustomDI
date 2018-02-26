@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.Text;
 
 
@@ -22,11 +23,13 @@ namespace RepositoryDataCommon {
 			IDbConnection vDataConn = mDataConnector.Connection(mDataConnector.ConnectionString);
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
 
-			try { 
-			vDBcmd.CommandText = "CREATE DATABASE IF NOT EXISTS `" + mDataConnector.DatabaseName + "`;";
-			vDBcmd.ExecuteNonQuery();
+			try {
+				vDataConn.Open();
+				vDBcmd.CommandText = "CREATE DATABASE IF NOT EXISTS `" + mDataConnector.DatabaseName + "`;";
+				vDBcmd.ExecuteNonQuery();
 
-			} catch {
+			} catch (Exception e) {
+				Debug.WriteLine($"****** Create DB error: {e} ******");
 				vDBcmd.Dispose();
 				vDataConn.Close();
 				return false;
@@ -44,7 +47,8 @@ namespace RepositoryDataCommon {
 			vDBcmd.CommandText = "CREATE TABLE IF NOT EXISTS `Guests`(`id` INT AUTO_INCREMENT, `name` TEXT, `email` TEXT, `phone` TEXT, `WillAttend` TEXT, PRIMARY KEY(id))";
 			vDBcmd.ExecuteNonQuery();
 
-			} catch {
+			} catch (Exception e) {
+				Debug.WriteLine($"****** Create Table error: {e} ******");
 				vDBcmd.Dispose();
 				vDataConn.Close();
 				return false;
