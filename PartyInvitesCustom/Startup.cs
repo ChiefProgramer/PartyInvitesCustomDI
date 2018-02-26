@@ -94,7 +94,11 @@
 	}
 
 	//This Class Could be added to DI service as Lazy loader for RepoService
-	public class SelectRepoService {
+	public interface ISelectRepoService {
+		IGuestR SelelctRepository();
+	}
+
+	public class SelectRepoService : ISelectRepoService {
 		private IServiceCollection mServices;
 		private IConfiguration mConfiguration;
 
