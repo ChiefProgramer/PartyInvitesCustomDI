@@ -13519,11 +13519,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
+      "projectUniqueName": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
       "projectName": "PartyInvitesCustom",
-      "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
+      "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\PartyInvitesCustom\\PartyInvitesCustom.csproj",
       "packagesPath": "C:\\Users\\R-Gen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\PartyInvitesCustom\\obj\\",
+      "outputPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\PartyInvitesCustom\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13544,20 +13544,20 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
+            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
+              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
+            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj"
+            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj": {
+              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj"
+            "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj": {
+              "projectPath": "D:\\RGENWARE\\ChiefProgramer\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj"
             }
           }
         }

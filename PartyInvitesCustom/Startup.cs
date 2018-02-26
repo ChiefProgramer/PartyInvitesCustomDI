@@ -20,16 +20,9 @@
 		// This method gets called by the runtime. Use this method to add services 
 		// to the container.
 		public void ConfigureServices(IServiceCollection services) {
-			//Select Which implementation of the Repository to Use
-			//SelelctRepoService vSelelctRepoService = new SelelctRepoService(services, Configuration);
-
+			//Select Which implementation of the Repository to Use....
+			//And Select Which implementation of the ADO connector to Use... if needed
 			SelelctAndConfigureServices.SelelctRepoService(services, Configuration);
-
-			//Select Which implementation of the ADO connector to Use... if needed
-			//ConfigureRepoService vConfigRepoService = new ConfigureRepoService(services, Configuration);
-
-			SelelctAndConfigureServices.ConfigureRepoService(services, Configuration);
-
 			services.AddTransient<IGuests, Guests>();
 			services.AddSingleton(Configuration);
 			services.AddMvc();
@@ -74,6 +67,7 @@
 
 			switch (vDataSource.Value) {
 				case "ADO-DataCommon":
+					ConfigureRepoService(aServices, aConfiguration);
 					aServices.AddSingleton<IGuestR, GuestDataCommon>();
 					break;
 				case "Memory":
@@ -82,7 +76,8 @@
 			}
 		}
 
-		public static void ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
+		//This no longer needs to be public as it is only call if needed by SelectRepoService
+		private static void ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
 
 			var vDataSource = aConfiguration.GetSection("AppSettings:DataSource");
 
@@ -98,55 +93,68 @@
 		}
 	}
 
-	//////These Classes Could be added to DI service as Lazy loader for RepoService
+	//This Class Could be added to DI service as Lazy loader for RepoService
+	public class SelectRepoService {
+		private IServiceCollection mServices;
+		private IConfiguration mConfiguration;
 
-	////public class SelelctRepoService { 
-
-	////	public SelelctRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
-	////		SelelctRepository(aServices, aConfiguration);
-	////	}
-
-	////	//Select Which implementation of the Repository to Use
-	////	private void SelelctRepository(IServiceCollection aServices, IConfiguration aConfiguration) { 
-
-	////		var vDataSource = aConfiguration.GetSection("AppSettings:Repository");
-
-	////		switch (vDataSource.Value) {
-	////			case "ADO-DataCommon":
-	////				aServices.AddSingleton<IGuestR, GuestDataCommon>();
-	////				break;
-	////			case "Memory":
-	////				aServices.AddSingleton<IGuestR, GuestRepositoryMemory>();
-	////				break;
-	////		}
+		private IGuestR mSelelctedRepo;
+		private IRepoConnection mSlectedDataSource;
 
 
-	////	}
-	////}
 
-	////public class ConfigureRepoService {
+		public SelectRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
+			mServices = aServices;
+			mConfiguration = aConfiguration;
+		}
 
-	////	public ConfigureRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
-	////		SelelctDataSource(aServices, aConfiguration);
-	////	}
+		//Select Which implementation of the Repository to Use
 
-	////	//Select Which implementation of the ADO connector to Use
-	////	private void SelelctDataSource(IServiceCollection aServices, IConfiguration aConfiguration) {
+		public IGuestR SelelctRepository() {
+			return mSelelctedRepo ?? SelectRepo();
+		}
 
-	////		var vDataSource = aConfiguration.GetSection("AppSettings:DataSource");
+		private IGuestR SelectRepo() {
 
-	////		switch (vDataSource.Value) {
-	////			case "SQLite":
-	////				aServices.AddSingleton<IRepoConnection, SqliteConnection>();
-	////				break;
-	////			case "MySQL":
-	////				aServices.AddSingleton<IRepoConnection, MySQLConnection>();
-	////				break;
-	////		}
+			var vDataSource = mConfiguration.GetSection("AppSettings:Repository");
 
+			switch (vDataSource.Value) {
+				case "ADO-DataCommon":
+					mSelelctedRepo = new GuestDataCommon(SelectDataSource());
+					mServices.AddSingleton<IGuestR>(mSelelctedRepo);
+					break;
+				case "Memory":
+					mSelelctedRepo = new GuestRepositoryMemory();
+					mServices.AddSingleton<IGuestR>(mSelelctedRepo);
+					break;
+			}
+			return mSelelctedRepo;
 
-	////	}
-	////}
+		}
+
+		//This no longer needs to be public as it is only call if needed by SelectRepo
+		private IRepoConnection SelectDataSource() {
+			return mSlectedDataSource ?? SelectDATASource();
+		}
+
+			//Select Which implementation of the ADO connector to Use
+		private IRepoConnection SelectDATASource() {
+
+			var vDataSource = mConfiguration.GetSection("AppSettings:DataSource");
+
+			switch (vDataSource.Value) {
+				case "SQLite":
+					mSlectedDataSource = new SqliteConnection(mConfiguration);
+					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
+					break;
+				case "MySQL":
+					mSlectedDataSource = new MySQLConnection(mConfiguration);
+					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
+					break;
+			}
+			return mSlectedDataSource;
+		}
+	}
 
 
 }
