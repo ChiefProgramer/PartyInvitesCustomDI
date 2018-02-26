@@ -23,7 +23,6 @@ namespace RepositoryDataCommon {
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
 
 			try { 
-			vDataConn.Open();
 			vDBcmd.CommandText = "CREATE DATABASE IF NOT EXISTS `" + mDataConnector.DatabaseName + "`;";
 			vDBcmd.ExecuteNonQuery();
 
