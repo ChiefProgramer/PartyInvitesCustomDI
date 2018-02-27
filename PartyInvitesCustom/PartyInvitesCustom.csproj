@@ -19,6 +19,7 @@
     <ProjectReference Include="..\RepositoryLocalDb\RepositoryDataCommon.csproj" />
     <ProjectReference Include="..\RepositoryMemory\RepositoryMemory.csproj" />
     <ProjectReference Include="..\RepoSQLite\RepoSQLite.csproj" />
+    <ProjectReference Include="..\RepoSqlServerCompact\RepoSqlServerCompact.csproj" />
   </ItemGroup>
 
 </Project>

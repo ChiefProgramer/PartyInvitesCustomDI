@@ -11,6 +11,7 @@
 	using ReopMySQL;
 	using RepoSQLite;
 	using System.Configuration;
+	using RepoSqlServerCompact;
 
 	public class Startup {
 		public Startup(IConfiguration configuration) {
@@ -88,6 +89,9 @@
 				case "MySQL":
 					aServices.AddSingleton<IRepoConnection, MySQLConnection>();
 					break;
+				case "SqlCe":
+					aServices.AddSingleton<IRepoConnection, SqlCeConnection>();
+					break;
 			}
 
 		}
@@ -153,6 +157,10 @@
 					break;
 				case "MySQL":
 					mSlectedDataSource = new MySQLConnection(mConfiguration);
+					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
+					break;
+				case "SqlCe":
+					mSlectedDataSource = new SqlCeConnection(mConfiguration);
 					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
 					break;
 			}

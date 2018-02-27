@@ -1,16 +1,15 @@
 ﻿using Contracts;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Data.SqlServerCe;
 using System.Data;
-using System.Data.Common;
-using System.Data.SQLite;
 using System.IO;
 
-namespace RepoSQLite 
+namespace RepoSqlServerCompact
 {
-    public class SqliteConnection : IRepoConnection { 
-		string m_DbFileName; // "SQLiteDB.sqlite";
-		string m_ConnectionString; // "Data Source=" + m_DbFileName + ";"; //Data Source=SQLiteDB.sqlite;
+	public class SqlCeConnection : IRepoConnection {
+		string m_DbFileName; // "SqlCeDB.sdf";
+		string m_ConnectionString; //"data source=SqlCeDB.sdf;password=596b8c4dfd9207b6;encrypt database=TRUE"
 		string m_Database = "";
 
 		//###	Properties
@@ -33,14 +32,8 @@ namespace RepoSQLite
 
 		//Returns connection string with Database name
 		private string DbConnectionString {
-			get {
-				string dbName = "";
-				if (DatabaseName != "") dbName = "; database =" + DatabaseName;
-
-				return ConnectionString + dbName;
-			}
+			get { return ConnectionString; }
 		}
-
 
 		//####	Constuctor
 
@@ -49,24 +42,25 @@ namespace RepoSQLite
 		//I feel it is reasonable to either re-implement IRepoConnection for a non(ASP.NET Core) app or,
 		//Sub-class this class and change the constructor to as needed
 
-		public SqliteConnection(IConfiguration aConfiguration) { 
-			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:SQLiteConnection");
+		public SqlCeConnection(IConfiguration aConfiguration) {
+			var vConnectionString = aConfiguration.GetSection("ConnectionStrings:SqlCeConnection");
 			ConnectionString = vConnectionString.Value;
 		}
 
-
 		//####	Methods
 
-		//Takes connection string returns SQLiteConnection
+		//Takes connection string returns SqlCeConnection
 		public IDbConnection Connection(string aConnectionString) {
-		
+
 			//Create SQLite file if it does not exist
 			if (File.Exists(m_DbFileName) == false) {
-				SQLiteConnection.CreateFile(m_DbFileName);
+				SqlCeEngine SqlEngine = new SqlCeEngine(aConnectionString);
+				SqlEngine.CreateDatabase();
+				SqlEngine.Dispose();
 			}
 
-			//This is where we provide a SQLite implementation of System.Data.IDbConnection
-			var vConnection = new SQLiteConnection(aConnectionString);
+			//This is where we provide a SqlCe implementation of System.Data.IDbConnection
+			var vConnection = new System.Data.SqlServerCe.SqlCeConnection();
 
 			return (vConnection);
 		}
@@ -85,7 +79,7 @@ namespace RepoSQLite
 		//Parses File Name From Connection String
 		private string ParseFileNameFromConnectionString(string ConnectionString) {
 
-			string vFileName = ConnectionString.Substring(ConnectionString.IndexOf("=") + 1,  ConnectionString.IndexOf(";") - ConnectionString.IndexOf("=") - 1);
+			string vFileName = ConnectionString.Substring(ConnectionString.IndexOf("=") + 1, ConnectionString.Length - ConnectionString.IndexOf("=") - 2);
 
 			return vFileName;
 		}
