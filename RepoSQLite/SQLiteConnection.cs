@@ -85,7 +85,7 @@ namespace RepoSQLite
 		//Parses File Name From Connection String
 		private string ParseFileNameFromConnectionString(string ConnectionString) {
 
-			string vFileName = ConnectionString.Substring(ConnectionString.IndexOf("=") + 1,  ConnectionString.IndexOf(";") - ConnectionString.IndexOf("=") - 1);
+			string vFileName = ConnectionString.Substring(ConnectionString.IndexOf("=") + 1, ConnectionString.Length - ConnectionString.IndexOf("=") - 2);
 
 			return vFileName;
 		}
