@@ -59,21 +59,20 @@ namespace RepoSQLite
 
 		//Takes connection string returns SQLiteConnection
 		public IDbConnection Connection(string aConnectionString) {
-		
+			ConnectionString = aConnectionString;
+
 			//Create SQLite file if it does not exist
 			if (File.Exists(m_DbFileName) == false) {
 				SQLiteConnection.CreateFile(m_DbFileName);
 			}
 
-			//This is where we provide a SQLite implementation of System.Data.IDbConnection
-			var vConnection = new SQLiteConnection(aConnectionString);
-
-			return (vConnection);
+			return Connection();
 		}
 
 		//Returns Open IDbconnection
 		public IDbConnection Connection() {
-			var vConnection = Connection(DbConnectionString);
+			//This is where we provide a SQLite implementation of System.Data.IDbConnection
+			var vConnection = new SQLiteConnection(ConnectionString);
 			vConnection.Open();
 
 			return (vConnection);
