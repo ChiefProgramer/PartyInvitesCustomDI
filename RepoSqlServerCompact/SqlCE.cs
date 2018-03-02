@@ -31,8 +31,14 @@ namespace RepoSqlServerCompact
 		}
 
 		//Returns connection string with Database name
-		private string DbConnectionString {
-			get { return ConnectionString; }
+		private string ConnectionStringWithDBname {
+			get { 
+				string dbName = "";
+				if (DatabaseName != "") dbName = "; database =" + DatabaseName;
+
+				return ConnectionString + dbName;
+
+			}
 		}
 
 		//####	Constuctor
@@ -51,6 +57,7 @@ namespace RepoSqlServerCompact
 
 		//Takes connection string returns SqlCeConnection
 		public IDbConnection Connection(string aConnectionString) {
+			ConnectionString = aConnectionString;
 
 			//Create SqlCe file if it does not exist
 			if (File.Exists(m_DbFileName) == false) {
@@ -59,15 +66,13 @@ namespace RepoSqlServerCompact
 				SqlEngine.Dispose();
 			}
 
-			//This is where we provide a SqlCe implementation of System.Data.IDbConnection
-			var vConnection = new System.Data.SqlServerCe.SqlCeConnection();
-
-			return (vConnection);
+			return (Connection());
 		}
 
 		//Returns Open IDbconnection
 		public IDbConnection Connection() {
-			var vConnection = Connection(DbConnectionString);
+			//This is where we provide a SqlCe implementation of System.Data.IDbConnection
+			var vConnection = new System.Data.SqlServerCe.SqlCeConnection();
 			vConnection.Open();
 
 			return (vConnection);

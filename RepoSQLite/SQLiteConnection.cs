@@ -32,7 +32,7 @@ namespace RepoSQLite
 		}
 
 		//Returns connection string with Database name
-		private string DbConnectionString {
+		private string ConnectionStringWithDBname {
 			get {
 				string dbName = "";
 				if (DatabaseName != "") dbName = "; database =" + DatabaseName;

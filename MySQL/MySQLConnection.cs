@@ -25,7 +25,7 @@ namespace ReopMySQL
 
 
 		//Returns connection string with Database name
-		private string DbConnectionString {
+		private string ConnectionStringWithDBname {
 			get {
 				string dbName = "";
 				if (DatabaseName != "") dbName = "; database =" + DatabaseName;
@@ -52,17 +52,16 @@ namespace ReopMySQL
 
 		//Takes connection string returns MySQLConnection
 		public IDbConnection Connection(string aConnectionString) {
+			ConnectionString = aConnectionString;
 
-			//This is where we provide a MySql implementation of System.Data.IDbConnection
-			var vConnection = new MySqlConnection { ConnectionString = aConnectionString }; 
-
-			return (vConnection);
+			return (Connection());
 		}
 
 
 		//Returns Open IDbconnection
 		public IDbConnection Connection() {
-			var vConnection = Connection(DbConnectionString);
+			//This is where we provide a MySql implementation of System.Data.IDbConnection
+			var vConnection = new MySqlConnection { ConnectionString = ConnectionStringWithDBname };
 			vConnection.Open();
 
 			return (vConnection);

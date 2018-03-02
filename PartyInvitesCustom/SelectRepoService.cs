@@ -6,13 +6,9 @@ using RepositoryDataCommon;
 using RepositoryMemory;
 using RepoSQLite;
 using RepoSqlServerCompact;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace PartyInvitesCustom
-{
+
+namespace PartyInvitesCustom {
 	//This Class Could be added to DI service as Lazy loader for RepoService
 
 
@@ -38,14 +34,14 @@ namespace PartyInvitesCustom
 
 		private IGuestR SelectRepo() {
 
-			var vDataSource = mConfiguration.GetSection("AppSettings:Repository");
+			var vDataSource = mConfiguration.GetSection(Constants.Strings.AppSettings_Repository); // Constants.MyStrings
 
 			switch (vDataSource.Value) {
-				case "ADO-DataCommon":
+				case Constants.Strings.ADO_DataCommon:
 					mSelelctedRepo = new GuestDataCommon(SelectDataSource());
 					mServices.AddSingleton<IGuestR>(mSelelctedRepo);
 					break;
-				case "Memory":
+				case Constants.Strings.Memory:
 					mSelelctedRepo = new GuestRepositoryMemory();
 					mServices.AddSingleton<IGuestR>(mSelelctedRepo);
 					break;
@@ -62,18 +58,18 @@ namespace PartyInvitesCustom
 		//Select Which implementation of the ADO connector to Use
 		private IRepoConnection SelectDATASource() {
 
-			var vDataSource = mConfiguration.GetSection("AppSettings:DataSource");
+			var vDataSource = mConfiguration.GetSection(Constants.Strings.AppSettings_DataSource);
 
 			switch (vDataSource.Value) {
-				case "SQLite":
+				case Constants.Strings.SQLite:
 					mSlectedDataSource = new SqliteConnection(mConfiguration);
 					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
 					break;
-				case "MySQL":
+				case Constants.Strings.MySQL:
 					mSlectedDataSource = new MySQLConnection(mConfiguration);
 					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
 					break;
-				case "SqlCe":
+				case Constants.Strings.SqlCe:
 					mSlectedDataSource = new SqlCeConnection(mConfiguration);
 					mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
 					break;
