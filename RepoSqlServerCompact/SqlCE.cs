@@ -52,7 +52,7 @@ namespace RepoSqlServerCompact
 		//Takes connection string returns SqlCeConnection
 		public IDbConnection Connection(string aConnectionString) {
 
-			//Create SQLite file if it does not exist
+			//Create SqlCe file if it does not exist
 			if (File.Exists(m_DbFileName) == false) {
 				SqlCeEngine SqlEngine = new SqlCeEngine(aConnectionString);
 				SqlEngine.CreateDatabase();

@@ -19,7 +19,7 @@ namespace RepositoryDataCommon {
 		}
 
 		//this creates DB and add tables... if needed
-		public void SetupDataBase() {
+		private void SetupDataBase() {
 			DbCreator mDbCreator = new DbCreator(mDataConnector);
 
 			//if this fails its becasue we did not need to do this 
