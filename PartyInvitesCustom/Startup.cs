@@ -23,7 +23,7 @@
 		public void ConfigureServices(IServiceCollection services) {
 			//Select Which implementation of the Repository to Use....
 			//And Select Which implementation of the ADO connector to Use... if needed
-			SelelctAndConfigureServices.SelelctRepoService(services, Configuration);
+			SelelctAndConfigureServices.SelectRepoService(services, Configuration);
 			services.AddTransient<IGuests, Guests>();
 			services.AddSingleton(Configuration);
 			services.AddMvc();

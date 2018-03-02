@@ -16,7 +16,7 @@ namespace PartyInvitesCustom
 	public static class SelelctAndConfigureServices {
 
 		//Select Which implementation of the Repository to Use
-		public static void SelelctRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
+		public static void SelectRepoService(IServiceCollection aServices, IConfiguration aConfiguration) {
 
 			var vDataSource = aConfiguration.GetSection("AppSettings:Repository");
 
