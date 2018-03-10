@@ -13,7 +13,7 @@ namespace PartyInvitesCustom.Orchestrators
 
 		private readonly IGuestR _Repository; //Its a Singleton, so this is just reference to a single instance
 
-		public Guests(IGuestR aGuestR, IRepoConnection aReopConnection) {
+		public Guests(IGuestR aGuestR) {
 
 			_Repository =
 				aGuestR
@@ -30,7 +30,7 @@ namespace PartyInvitesCustom.Orchestrators
 		public List<AttendingGuest> GuestList() {
 			List<AttendingGuest> atGuestList = new List<AttendingGuest>();
 
-			var guestList = _Repository.GetAll().Where(r => r.WillAttend == true);
+			var guestList = _Repository.GetAllAsync().Result.Where(r => r.WillAttend == true);
 
 			foreach (var guest in guestList) {
 				GuestAdaptor vGuestAd = new GuestAdaptor();

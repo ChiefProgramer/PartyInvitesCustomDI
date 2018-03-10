@@ -9,9 +9,9 @@ namespace PartyInvitesCustom.Adapters
 {
 	public class GuestAdaptor {
 
-		public IGuest Adapt(GuestResponse aGuestResponse) {
+		public Guest Adapt(GuestResponse aGuestResponse) {
 
-			IGuest vGuest = new Guest();
+			Guest vGuest = new Guest();
 			vGuest.Name = aGuestResponse.Name;
 			vGuest.Email = aGuestResponse.Email;
 			vGuest.Phone = aGuestResponse.Phone;
@@ -21,7 +21,7 @@ namespace PartyInvitesCustom.Adapters
 		}
 
 
-		public AttendingGuest Adapt(IGuest aGuest) {
+		public AttendingGuest Adapt(Guest aGuest) {
 
 			AttendingGuest vAttGuest = new AttendingGuest();
 			vAttGuest.Name = aGuest.Name;

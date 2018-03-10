@@ -44,7 +44,7 @@ namespace RepositoryDataCommon {
 			IDbConnection vDataConn = mDataConnector.Connection();
 			IDbCommand vDBcmd = vDataConn.CreateCommand();
 			try { 
-			vDBcmd.CommandText = "CREATE TABLE IF NOT EXISTS `Guests`(`id` INT AUTO_INCREMENT, `name` TEXT, `email` TEXT, `phone` TEXT, `WillAttend` TEXT, PRIMARY KEY(id))";
+			vDBcmd.CommandText = "CREATE TABLE IF NOT EXISTS `Guests`(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `email` TEXT, `phone` TEXT, `WillAttend` BOOL)";
 			vDBcmd.ExecuteNonQuery();
 
 			} catch (Exception e) {

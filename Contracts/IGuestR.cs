@@ -1,15 +1,16 @@
 ﻿namespace Contracts {
 	using System.Collections.Generic;
+	using System.Threading.Tasks;
 	using Entities;
 
 	public interface IGuestR {
 
-		int Count();
-		void Add(IGuest aGuest);
-		void Update(IGuest aGuest);
+		Task<int> CountAsync();
+		void Add(Guest aGuest);
+		void Update(Guest aGuest);
 		void Delete(int aGuestId);
-		IGuest Get(int aGuestId);
-		List<IGuest> GetAll();
+		Task<Guest> GetAsync(int aGuestId);
+		Task<List<Guest>> GetAllAsync();
 
 	}
 }

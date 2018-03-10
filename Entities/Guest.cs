@@ -1,7 +1,7 @@
 ﻿namespace Entities
 {
 
-	public class Guest : IGuest { //could call this PartyGuest
+	public class Guest { //could call this PartyGuest
 
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -10,8 +10,8 @@
 		public bool? WillAttend { get; set; }
 
 		public override string ToString() {
-			return "'" + Name + "','" + Email + "','" + Phone + "','" + WillAttend.ToString() +  "'";
-			
+			return "'" + Name + "','" + Email + "','" + Phone + "','" + System.Convert.ToInt32(WillAttend) +  "'";
+
 		}
 
 	}

@@ -1,24 +1,27 @@
 ﻿namespace RepositoryMemory {
 	using System;
 	using System.Collections.Generic;
+	using System.Threading.Tasks;
 	using Contracts;
 	using Entities;
 
 	public class GuestRepositoryMemory : IGuestR {
 
-		private static readonly List<IGuest> _Storage =
-			new List<IGuest>();
+		private static readonly List<Guest> _Storage =
+			new List<Guest>();
 
-		public int Count() {
-			int vResult = _Storage.Count;
+		public Task<int> CountAsync() {
+			return Task.Run(() => {
+				int vResult = _Storage.Count;
 			return vResult;
+			});
 		}
 
-		public void Add(IGuest aPartyInvite) {
+		public void Add(Guest aPartyInvite) {
 			_Storage.Add(aPartyInvite);
 		}
 
-		public void Update(IGuest aPartyInvite) {
+		public void Update(Guest aPartyInvite) {
 			throw new NotImplementedException();
 		}
 
@@ -26,17 +29,21 @@
 			throw new NotImplementedException();
 		}
 
-		public IGuest Get(int aPartyInviteId) {
-			throw new NotImplementedException();
+		public Task<Guest> GetAsync(int aPartyInviteId) {
+				throw new NotImplementedException();
 		}
 
-		public List<IGuest> GetAll() { return _Storage; }
+		public Task<List<Guest>> GetAllAsync() {
+			return Task.Run(() => {
+				return _Storage;
+			});
+		}
 
 		public void StartUp(IRepoConnection aReopConnection) {
 			
 		}
 
-		public void StartUp(IRepoConnection aReopConnection, IGuest aGuest) {
+		public void StartUp(IRepoConnection aReopConnection, Guest aGuest) {
 			throw new NotImplementedException();
 		}
 	}

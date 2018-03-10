@@ -17,10 +17,15 @@
     <ProjectReference Include="..\Constants\Constants.csproj" />
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\RepoEFCoreConnectorSqlServerCompact\RepoEFCoreConnectorSqlServerCompact.csproj" />
+    <ProjectReference Include="..\RepoRFCoreConnectorSQLite\RepoEFCoreConnectorSQLite.csproj" />
+    <ProjectReference Include="..\RepositoryEFCore\RepositoryEFCore.csproj" />
     <ProjectReference Include="..\RepositoryLocalDb\RepositoryDataCommon.csproj" />
     <ProjectReference Include="..\RepositoryMemory\RepositoryMemory.csproj" />
-    <ProjectReference Include="..\RepoSQLite\RepoSQLite.csproj" />
-    <ProjectReference Include="..\RepoSqlServerCompact\RepoSqlServerCompact.csproj" />
+    <ProjectReference Include="..\RepoSQLite\RepoConnectorSQLite.csproj" />
+    <ProjectReference Include="..\RepoSqlServerCompact\RepoConnectorSqlServerCompact.csproj" />
+    <ProjectReference Include="..\xData_Layer_EFCore\xData_Layer_EFCore_SQLite.csproj" />
+    <ProjectReference Include="..\xData_Layer_EFCore_SqlServerCompact\xData_Layer_EFCore_SqlServerCompact.csproj" />
   </ItemGroup>
 
 </Project>

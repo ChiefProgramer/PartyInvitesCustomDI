@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Threading.Tasks;
 using Contracts;
 using Entities;
 
@@ -27,7 +28,9 @@ namespace RepositoryDataCommon {
 			mDbCreator.CreateTables();
 		}
 
-		public int Count() {
+		public Task<int> CountAsync() {
+			return Task.Run(() => {
+
 			int vRecordCount;
 			IDbConnection DataConn = mDataConnector.Connection();
 			IDbCommand DBcmd = DataConn.CreateCommand();
@@ -38,52 +41,66 @@ namespace RepositoryDataCommon {
 
 			DataConn.Close();
 			return vRecordCount;
+			});
 		}
 
-		public void Add(IGuest aGuest) {
-			ExecuteNonQuery("insert into Guests (name, email, phone, WillAttend) values(" + aGuest.ToString() + ");");
+		public void Add(Guest aGuest) {
+			Task.Run(() => {
+				ExecuteNonQuery("insert into Guests (name, email, phone, WillAttend) values(" + aGuest.ToString() + ");");
+			});
 		}
 
-		public void Update(IGuest aGuest) {
-			throw new NotImplementedException();
+
+		public void Update(Guest aGuest) {
+			Task.Run(() => {
+				throw new NotImplementedException();
+			});
 		}
 
 		public void Delete(int aGuestId) {
-			ExecuteNonQuery("DELETE FROM Guests WHERE id =" + aGuestId);
+			Task.Run(() => {
+				ExecuteNonQuery("DELETE FROM Guests WHERE id =" + aGuestId);
+			});
 		}
 
-		public IGuest Get(int aGuestId) {
-			//Use SQL to get data; Set poperties on Guest object
-			IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
-			var vReader = GetReader(DataConn, "SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
+		public Task<Guest> GetAsync(int aGuestId) {
+			return Task.Run(() => {
 
-			//if there is nothing to read; return null
-			IGuest aGuest = null; 
+				//Use SQL to get data; Set poperties on Guest object
+				IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
+				var vReader = GetReader(DataConn, "SELECT * From Guests WHERE id = aGuestId"); //Execute SQL returns IDataReader
 
-			if (vReader.Read()) {
-				aGuest = new Guest();
-				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
-			}
+				//if there is nothing to read; return null
+				Guest aGuest = null;
 
-			DataConn.Close();
-			return aGuest;
+				if (vReader.Read()) {
+					aGuest = new Guest();
+					aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
+				}
+
+				DataConn.Close();
+				return aGuest;
+			});
 		}
 
-		public List<IGuest> GetAll() {
-			List<IGuest> aGuestList = new List<IGuest>();
-			IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
+		public Task<List<Guest>> GetAllAsync() {
+			return Task.Run(() => {
 
-			var vReader = GetReader(DataConn, "SELECT * From Guests"); //Execute SQL returns IDataReader
+				List<Guest> aGuestList = new List<Guest>();
+				IDbConnection DataConn = mDataConnector.Connection();//Gets open connection to Database
 
-			while (vReader.Read()) {
-				IGuest aGuest = new Guest(); 
+				var vReader = GetReader(DataConn, "SELECT * From Guests"); //Execute SQL returns IDataReader
 
-				aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
-				aGuestList.Add(aGuest);
-			}
+				while (vReader.Read()) {
+					Guest aGuest = new Guest();
 
-			DataConn.Close();
-			return aGuestList;
+					aGuest = MapReaderToGuest(vReader, aGuest); //Set poperties on Guest object
+					aGuestList.Add(aGuest);
+				}
+
+				DataConn.Close();
+				return aGuestList;
+			});
 		}
 
 
@@ -119,18 +136,13 @@ namespace RepositoryDataCommon {
 		}
 
 		//Sets poperties on Guest object
-		private IGuest MapReaderToGuest(IDataReader aReader,IGuest aGuest) {
+		private Guest MapReaderToGuest(IDataReader aReader,Guest aGuest) {
 
+			aGuest.Id = aReader.GetInt32(0);
 			aGuest.Name = aReader.GetString(1);
 			aGuest.Email = aReader.GetString(2);
 			aGuest.Phone = aReader.GetString(3);
-			string vWillAttend = aReader.GetString(4);
-			if (vWillAttend.ToLower() == "true") {
-				aGuest.WillAttend = true;
-			}
-			else {
-				aGuest.WillAttend = false;
-			}
+			aGuest.WillAttend = aReader.GetBoolean(4);
 
 			return aGuest;
 		}

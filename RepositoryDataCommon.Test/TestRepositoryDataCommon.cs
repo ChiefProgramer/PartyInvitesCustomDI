@@ -79,12 +79,12 @@ namespace RepositoryDataCommon.Test
             TestRepoConnection vTestRepoConnection = new TestRepoConnection();
             GuestDataCommon vTestRepo = new GuestDataCommon(vTestRepoConnection);
             //vTestRepo.StartUp();
-            int vCountBefore = vTestRepo.Count();
+            int vCountBefore = vTestRepo.CountAsync().Result;
             Guest vRecord = MakeNewRecord();
 
             // Act
             vTestRepo.Add(vRecord);
-            int vCountAfter = vTestRepo.Count();
+            int vCountAfter = vTestRepo.CountAsync().Result;
 
             // Assert
             vCountAfter.Should().Be(vCountBefore + 1);

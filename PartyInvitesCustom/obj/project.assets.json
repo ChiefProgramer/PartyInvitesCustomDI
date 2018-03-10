@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "EntityFrameworkCore.SqlServerCompact35/2.0.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net461/EntityFrameworkCore.SqlServerCompact35.dll": {}
+        },
+        "runtime": {
+          "lib/net461/EntityFrameworkCore.SqlServerCompact35.dll": {}
+        }
+      },
+      "EntityFrameworkCore.SqlServerCompact35.Design/1.1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net451/EntityFrameworkCore.SqlServerCompact35.Design.dll": {}
+        },
+        "runtime": {
+          "lib/net451/EntityFrameworkCore.SqlServerCompact35.Design.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -5118,6 +5136,16 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "Constants/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Constants.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Constants.dll": {}
+        }
+      },
       "Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -5141,7 +5169,7 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
-      "RepoMySQL/1.0.0": {
+      "RepoConnectorMySQL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -5150,10 +5178,68 @@
           "MySql.Data": "6.10.5"
         },
         "compile": {
-          "bin/placeholder/RepoMySQL.dll": {}
+          "bin/placeholder/RepoConnectorMySQL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepoMySQL.dll": {}
+          "bin/placeholder/RepoConnectorMySQL.dll": {}
+        }
+      },
+      "RepoConnectorSQLite/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Microsoft.AspNetCore.All": "2.0.5",
+          "System.Data.SQLite.Core": "1.0.107"
+        },
+        "compile": {
+          "bin/placeholder/RepoConnectorSQLite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoConnectorSQLite.dll": {}
+        }
+      },
+      "RepoConnectorSqlServerCompact/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Microsoft.AspNetCore.All": "2.0.5",
+          "SqlServerCompact": "4.0.8854.1"
+        },
+        "compile": {
+          "bin/placeholder/RepoConnectorSqlServerCompact.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoConnectorSqlServerCompact.dll": {}
+        }
+      },
+      "RepoEFCoreConnectorSQLite/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.0.1",
+          "xData_Layer_EFCore_SQLite": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoEFCoreConnectorSQLite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoEFCoreConnectorSQLite.dll": {}
+        }
+      },
+      "RepoEFCoreConnectorSqlServerCompact/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoEFCoreConnectorSqlServerCompact.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoEFCoreConnectorSqlServerCompact.dll": {}
         }
       },
       "RepositoryDataCommon/1.0.0": {
@@ -5162,13 +5248,29 @@
         "dependencies": {
           "Contracts": "1.0.0",
           "Entities": "1.0.0",
-          "RepoMySQL": "1.0.0"
+          "RepoConnectorMySQL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RepositoryDataCommon.dll": {}
         },
         "runtime": {
           "bin/placeholder/RepositoryDataCommon.dll": {}
+        }
+      },
+      "RepositoryEFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "xData_Layer_EFCore_SQLite": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepositoryEFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepositoryEFCore.dll": {}
         }
       },
       "RepositoryMemory/1.0.0": {
@@ -5185,39 +5287,61 @@
           "bin/placeholder/RepositoryMemory.dll": {}
         }
       },
-      "RepoSQLite/1.0.0": {
+      "xData_Layer_EFCore_SQLite/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Contracts": "1.0.0",
-          "Microsoft.AspNetCore.All": "2.0.5",
-          "System.Data.SQLite.Core": "1.0.107"
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1"
         },
         "compile": {
-          "bin/placeholder/RepoSQLite.dll": {}
+          "bin/placeholder/xData_Layer_EFCore_SQLite.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepoSQLite.dll": {}
+          "bin/placeholder/xData_Layer_EFCore_SQLite.dll": {}
         }
       },
-      "RepoSqlServerCompact/1.0.0": {
+      "xData_Layer_EFCore_SqlServerCompact/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Contracts": "1.0.0",
-          "Microsoft.AspNetCore.All": "2.0.5",
-          "SqlServerCompact": "4.0.8854.1"
+          "EntityFrameworkCore.SqlServerCompact35": "2.0.1.1",
+          "EntityFrameworkCore.SqlServerCompact35.Design": "1.1.0.1",
+          "Microsoft.EntityFrameworkCore": "2.0.1"
         },
         "compile": {
-          "bin/placeholder/RepoSqlServerCompact.dll": {}
+          "bin/placeholder/xData_Layer_EFCore_SqlServerCompact.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepoSqlServerCompact.dll": {}
+          "bin/placeholder/xData_Layer_EFCore_SqlServerCompact.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "EntityFrameworkCore.SqlServerCompact35/2.0.1.1": {
+      "sha512": "/IG/5Hs3BooKCz4z1ptw5v5LhLIzzQFkPwZPKTl9kFci8/S2ivLX6UVOgO4kF7OPSXK5PnIPRgrHCuqCCSYB9w==",
+      "type": "package",
+      "path": "entityframeworkcore.sqlservercompact35/2.0.1.1",
+      "files": [
+        "entityframeworkcore.sqlservercompact35.2.0.1.1.nupkg.sha512",
+        "entityframeworkcore.sqlservercompact35.nuspec",
+        "lib/net461/EntityFrameworkCore.SqlServerCompact35.dll"
+      ]
+    },
+    "EntityFrameworkCore.SqlServerCompact35.Design/1.1.0.1": {
+      "sha512": "/XVWLwn94wGt+8x09bWgRFFu0WbwSAyFDf+cWKlyFW0oPbkTFHWo6rtbuUE0dWV+jqCT00v9Nv/mrjtATFFoLA==",
+      "type": "package",
+      "path": "entityframeworkcore.sqlservercompact35.design/1.1.0.1",
+      "files": [
+        "entityframeworkcore.sqlservercompact35.design.1.1.0.1.nupkg.sha512",
+        "entityframeworkcore.sqlservercompact35.design.nuspec",
+        "lib/net451/EntityFrameworkCore.SqlServerCompact35.Design.dll"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -13541,6 +13665,11 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "Constants/1.0.0": {
+      "type": "project",
+      "path": "../Constants/Constants.csproj",
+      "msbuildProject": "../Constants/Constants.csproj"
+    },
     "Contracts/1.0.0": {
       "type": "project",
       "path": "../Contracts/Contracts.csproj",
@@ -13551,43 +13680,74 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
-    "RepoMySQL/1.0.0": {
+    "RepoConnectorMySQL/1.0.0": {
       "type": "project",
-      "path": "../MySQL/RepoMySQL.csproj",
-      "msbuildProject": "../MySQL/RepoMySQL.csproj"
+      "path": "../MySQL/RepoConnectorMySQL.csproj",
+      "msbuildProject": "../MySQL/RepoConnectorMySQL.csproj"
+    },
+    "RepoConnectorSQLite/1.0.0": {
+      "type": "project",
+      "path": "../RepoSQLite/RepoConnectorSQLite.csproj",
+      "msbuildProject": "../RepoSQLite/RepoConnectorSQLite.csproj"
+    },
+    "RepoConnectorSqlServerCompact/1.0.0": {
+      "type": "project",
+      "path": "../RepoSqlServerCompact/RepoConnectorSqlServerCompact.csproj",
+      "msbuildProject": "../RepoSqlServerCompact/RepoConnectorSqlServerCompact.csproj"
+    },
+    "RepoEFCoreConnectorSQLite/1.0.0": {
+      "type": "project",
+      "path": "../RepoRFCoreConnectorSQLite/RepoEFCoreConnectorSQLite.csproj",
+      "msbuildProject": "../RepoRFCoreConnectorSQLite/RepoEFCoreConnectorSQLite.csproj"
+    },
+    "RepoEFCoreConnectorSqlServerCompact/1.0.0": {
+      "type": "project",
+      "path": "../RepoEFCoreConnectorSqlServerCompact/RepoEFCoreConnectorSqlServerCompact.csproj",
+      "msbuildProject": "../RepoEFCoreConnectorSqlServerCompact/RepoEFCoreConnectorSqlServerCompact.csproj"
     },
     "RepositoryDataCommon/1.0.0": {
       "type": "project",
       "path": "../RepositoryLocalDb/RepositoryDataCommon.csproj",
       "msbuildProject": "../RepositoryLocalDb/RepositoryDataCommon.csproj"
     },
+    "RepositoryEFCore/1.0.0": {
+      "type": "project",
+      "path": "../RepositoryEFCore/RepositoryEFCore.csproj",
+      "msbuildProject": "../RepositoryEFCore/RepositoryEFCore.csproj"
+    },
     "RepositoryMemory/1.0.0": {
       "type": "project",
       "path": "../RepositoryMemory/RepositoryMemory.csproj",
       "msbuildProject": "../RepositoryMemory/RepositoryMemory.csproj"
     },
-    "RepoSQLite/1.0.0": {
+    "xData_Layer_EFCore_SQLite/1.0.0": {
       "type": "project",
-      "path": "../RepoSQLite/RepoSQLite.csproj",
-      "msbuildProject": "../RepoSQLite/RepoSQLite.csproj"
+      "path": "../xData_Layer_EFCore/xData_Layer_EFCore_SQLite.csproj",
+      "msbuildProject": "../xData_Layer_EFCore/xData_Layer_EFCore_SQLite.csproj"
     },
-    "RepoSqlServerCompact/1.0.0": {
+    "xData_Layer_EFCore_SqlServerCompact/1.0.0": {
       "type": "project",
-      "path": "../RepoSqlServerCompact/RepoSqlServerCompact.csproj",
-      "msbuildProject": "../RepoSqlServerCompact/RepoSqlServerCompact.csproj"
+      "path": "../xData_Layer_EFCore_SqlServerCompact/xData_Layer_EFCore_SqlServerCompact.csproj",
+      "msbuildProject": "../xData_Layer_EFCore_SqlServerCompact/xData_Layer_EFCore_SqlServerCompact.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Constants >= 1.0.0",
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1",
-      "RepoSQLite >= 1.0.0",
-      "RepoSqlServerCompact >= 1.0.0",
+      "RepoConnectorSQLite >= 1.0.0",
+      "RepoConnectorSqlServerCompact >= 1.0.0",
+      "RepoEFCoreConnectorSQLite >= 1.0.0",
+      "RepoEFCoreConnectorSqlServerCompact >= 1.0.0",
       "RepositoryDataCommon >= 1.0.0",
-      "RepositoryMemory >= 1.0.0"
+      "RepositoryEFCore >= 1.0.0",
+      "RepositoryMemory >= 1.0.0",
+      "xData_Layer_EFCore_SQLite >= 1.0.0",
+      "xData_Layer_EFCore_SqlServerCompact >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13626,8 +13786,17 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoEFCoreConnectorSqlServerCompact\\RepoEFCoreConnectorSqlServerCompact.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoEFCoreConnectorSqlServerCompact\\RepoEFCoreConnectorSqlServerCompact.csproj"
+            },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\xData_Layer_EFCore_SqlServerCompact\\xData_Layer_EFCore_SqlServerCompact.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\xData_Layer_EFCore_SqlServerCompact\\xData_Layer_EFCore_SqlServerCompact.csproj"
+            },
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
+            },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSqlServerCompact\\RepoConnectorSqlServerCompact.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSqlServerCompact\\RepoConnectorSqlServerCompact.csproj"
             },
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryMemory\\RepositoryMemory.csproj"
@@ -13635,14 +13804,23 @@
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
             },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Constants\\Constants.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Constants\\Constants.csproj"
+            },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\xData_Layer_EFCore\\xData_Layer_EFCore_SQLite.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\xData_Layer_EFCore\\xData_Layer_EFCore_SQLite.csproj"
+            },
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryLocalDb\\RepositoryDataCommon.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSqlServerCompact\\RepoSqlServerCompact.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSqlServerCompact\\RepoSqlServerCompact.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryEFCore\\RepositoryEFCore.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepositoryEFCore\\RepositoryEFCore.csproj"
             },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoSQLite.csproj"
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoRFCoreConnectorSQLite\\RepoEFCoreConnectorSQLite.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoRFCoreConnectorSQLite\\RepoEFCoreConnectorSQLite.csproj"
+            },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoConnectorSQLite.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\RepoSQLite\\RepoConnectorSQLite.csproj"
             }
           }
         }
@@ -13679,6 +13857,26 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFrameworkCore.SqlServerCompact35 2.0.1.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFrameworkCore.SqlServerCompact35",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFrameworkCore.SqlServerCompact35.Design 1.1.0.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFrameworkCore.SqlServerCompact35.Design",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

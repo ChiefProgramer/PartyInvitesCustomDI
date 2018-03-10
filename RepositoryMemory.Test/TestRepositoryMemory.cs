@@ -28,12 +28,12 @@ namespace RepositoryMemory.Test
             // Arrange
             int vExpected = 1;
             IGuestR vRepository = new GuestRepositoryMemory();
-            int vCount = vRepository.Count();
+            int vCount = vRepository.CountAsync().Result;
             Guest vRecord = MakeNewRecord();
 
             // Act
             vRepository.Add(vRecord);
-            int vResult = vRepository.Count();
+            int vResult = vRepository.CountAsync().Result;
 
             // Assert
             vResult.Should().Be(vExpected);

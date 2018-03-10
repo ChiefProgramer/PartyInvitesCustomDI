@@ -15,15 +15,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryDataCommon", "Rep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryMemory.Test", "RepositoryMemory.Test\RepositoryMemory.Test.csproj", "{AF884C7E-7334-47EA-8B7D-CA095C939FBC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoMySQL", "MySQL\RepoMySQL.csproj", "{C991759E-450D-4D60-B1FF-1F82C187DA48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoConnectorMySQL", "MySQL\RepoConnectorMySQL.csproj", "{C991759E-450D-4D60-B1FF-1F82C187DA48}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoSQLite", "RepoSQLite\RepoSQLite.csproj", "{06C9B9B4-3130-498A-9EC9-E88D77D609B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoConnectorSQLite", "RepoSQLite\RepoConnectorSQLite.csproj", "{06C9B9B4-3130-498A-9EC9-E88D77D609B1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryDataCommon.Test", "RepositoryDataCommon.Test\RepositoryDataCommon.Test.csproj", "{924184D4-4D0D-4527-BF6F-ACAC49F294C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoSqlServerCompact", "RepoSqlServerCompact\RepoSqlServerCompact.csproj", "{DC80FBCD-D6B1-4EE5-9674-9A933256DF0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoConnectorSqlServerCompact", "RepoSqlServerCompact\RepoConnectorSqlServerCompact.csproj", "{DC80FBCD-D6B1-4EE5-9674-9A933256DF0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constants", "Constants\Constants.csproj", "{84F10E4A-8160-490E-B46B-DD1F36177056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constants", "Constants\Constants.csproj", "{84F10E4A-8160-490E-B46B-DD1F36177056}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryEFCore", "RepositoryEFCore\RepositoryEFCore.csproj", "{C3AA9FD1-140B-4223-8024-41EF98D3F3BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xData_Layer_EFCore_SQLite", "xData_Layer_EFCore\xData_Layer_EFCore_SQLite.csproj", "{7CBF0D2C-1FB7-4468-BE76-5605654DEF30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoEFCoreConnectorSQLite", "RepoRFCoreConnectorSQLite\RepoEFCoreConnectorSQLite.csproj", "{290D552A-43EB-460F-8A44-92356ABAFDC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xData_Layer_EFCore_SqlServerCompact", "xData_Layer_EFCore_SqlServerCompact\xData_Layer_EFCore_SqlServerCompact.csproj", "{250CA68D-FB7B-400B-BB2C-6B13FD53088C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoEFCoreConnectorSqlServerCompact", "RepoEFCoreConnectorSqlServerCompact\RepoEFCoreConnectorSqlServerCompact.csproj", "{CDF218E9-45A3-4C72-84F9-1C9C2F48BC86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +85,26 @@ Global
 		{84F10E4A-8160-490E-B46B-DD1F36177056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84F10E4A-8160-490E-B46B-DD1F36177056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84F10E4A-8160-490E-B46B-DD1F36177056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AA9FD1-140B-4223-8024-41EF98D3F3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AA9FD1-140B-4223-8024-41EF98D3F3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AA9FD1-140B-4223-8024-41EF98D3F3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AA9FD1-140B-4223-8024-41EF98D3F3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBF0D2C-1FB7-4468-BE76-5605654DEF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBF0D2C-1FB7-4468-BE76-5605654DEF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBF0D2C-1FB7-4468-BE76-5605654DEF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBF0D2C-1FB7-4468-BE76-5605654DEF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290D552A-43EB-460F-8A44-92356ABAFDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290D552A-43EB-460F-8A44-92356ABAFDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290D552A-43EB-460F-8A44-92356ABAFDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290D552A-43EB-460F-8A44-92356ABAFDC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250CA68D-FB7B-400B-BB2C-6B13FD53088C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250CA68D-FB7B-400B-BB2C-6B13FD53088C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250CA68D-FB7B-400B-BB2C-6B13FD53088C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250CA68D-FB7B-400B-BB2C-6B13FD53088C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF218E9-45A3-4C72-84F9-1C9C2F48BC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF218E9-45A3-4C72-84F9-1C9C2F48BC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF218E9-45A3-4C72-84F9-1C9C2F48BC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF218E9-45A3-4C72-84F9-1C9C2F48BC86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

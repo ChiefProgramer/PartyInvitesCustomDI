@@ -20,10 +20,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-    <ProjectReference Include="..\MySQL\RepoMySQL.csproj" />
+    <ProjectReference Include="..\MySQL\RepoConnectorMySQL.csproj" />
     <ProjectReference Include="..\PartyInvitesCustom\PartyInvitesCustom.csproj" />
     <ProjectReference Include="..\RepositoryLocalDb\RepositoryDataCommon.csproj" />
-    <ProjectReference Include="..\RepoSQLite\RepoSQLite.csproj" />
+    <ProjectReference Include="..\RepoSQLite\RepoConnectorSQLite.csproj" />
   </ItemGroup>
 
 </Project>

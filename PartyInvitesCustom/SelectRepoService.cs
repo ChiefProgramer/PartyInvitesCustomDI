@@ -2,11 +2,13 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ReopMySQL;
+using RepoRFCoreConnectorSQLite;
 using RepositoryDataCommon;
+using RepositoryEFCore;
 using RepositoryMemory;
 using RepoSQLite;
 using RepoSqlServerCompact;
-
+using xData_Layer_EFCore_SQLite;
 
 namespace PartyInvitesCustom {
 	//This Class Could be added to DI service as Lazy loader for RepoService
@@ -18,6 +20,7 @@ namespace PartyInvitesCustom {
 
 		private IGuestR mSelelctedRepo;
 		private IRepoConnection mSlectedDataSource;
+		private IRepoEFCoreConnection mSlectedEFCoreDataSource;
 
 
 
@@ -44,6 +47,10 @@ namespace PartyInvitesCustom {
 				case Constants.Strings.Memory:
 					mSelelctedRepo = new GuestRepositoryMemory();
 					mServices.AddSingleton<IGuestR>(mSelelctedRepo);
+					break;
+				case Constants.Strings.EFCore:
+
+					//mSelelctedRepo = new GuestEFCore(SelectEFCoreDATASource());
 					break;
 			}
 			return mSelelctedRepo;
@@ -75,6 +82,28 @@ namespace PartyInvitesCustom {
 					break;
 			}
 			return mSlectedDataSource;
+		}
+
+		//Select Which implementation of the EFCore connector to Use
+		private IRepoEFCoreConnection SelectEFCoreDATASource() { 
+
+			var vDataSource = mConfiguration.GetSection(Constants.Strings.AppSettings_DataSource);
+
+			switch (vDataSource.Value) {
+				case Constants.Strings.SQLite:
+					//mSlectedEFCoreDataSource = new SqliteEFCoreConnection(mConfiguration,);
+					mServices.AddSingleton<IRepoEFCoreConnection>(mSlectedEFCoreDataSource);
+					break;
+				//case Constants.Strings.MySQL:
+				//	mSlectedDataSource = new MySQLConnection(mConfiguration);
+				//	mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
+				//	break;
+				//case Constants.Strings.SqlCe:
+				//	mSlectedDataSource = new SqlCeConnection(mConfiguration);
+				//	mServices.AddSingleton<IRepoConnection>(mSlectedDataSource);
+				//	break;
+			}
+			return mSlectedEFCoreDataSource;
 		}
 	}
 }

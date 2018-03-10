@@ -4830,7 +4830,7 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
-      "RepoMySQL/1.0.0": {
+      "RepoConnectorMySQL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -4839,10 +4839,10 @@
           "MySql.Data": "6.10.5"
         },
         "compile": {
-          "bin/placeholder/RepoMySQL.dll": {}
+          "bin/placeholder/RepoConnectorMySQL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RepoMySQL.dll": {}
+          "bin/placeholder/RepoConnectorMySQL.dll": {}
         }
       }
     }
@@ -12793,10 +12793,10 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
-    "RepoMySQL/1.0.0": {
+    "RepoConnectorMySQL/1.0.0": {
       "type": "project",
-      "path": "../MySQL/RepoMySQL.csproj",
-      "msbuildProject": "../MySQL/RepoMySQL.csproj"
+      "path": "../MySQL/RepoConnectorMySQL.csproj",
+      "msbuildProject": "../MySQL/RepoConnectorMySQL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12804,7 +12804,7 @@
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "RepoMySQL >= 1.0.0"
+      "RepoConnectorMySQL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12846,11 +12846,11 @@
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Contracts\\Contracts.csproj"
             },
+            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoConnectorMySQL.csproj": {
+              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoConnectorMySQL.csproj"
+            },
             "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\Entities\\Entities.csproj"
-            },
-            "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj": {
-              "projectPath": "C:\\Users\\R-Gen\\Source\\Repos\\PartyInvitesCustomDI\\MySQL\\RepoMySQL.csproj"
             }
           }
         }
